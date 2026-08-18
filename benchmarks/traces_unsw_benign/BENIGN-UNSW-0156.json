@@ -1,0 +1,40 @@
+{
+  "cve_id": "BENIGN-UNSW-0156",
+  "vendor": "HP",
+  "product": "Printer",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/fonts/HPSimplified.ttf",
+      "params": {},
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "HPPrinter",
+  "sampling": {
+    "method": "stratified",
+    "seed": 42,
+    "source_population": 11614,
+    "target_n": 281,
+    "max_per_device": 30,
+    "device": "HPPrinter",
+    "http_method": "GET"
+  }
+}

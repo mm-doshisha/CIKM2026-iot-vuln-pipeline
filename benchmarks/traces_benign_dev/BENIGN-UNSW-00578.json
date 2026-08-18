@@ -1,0 +1,29 @@
+{
+  "cve_id": "BENIGN-UNSW-00578",
+  "vendor": "Amazon",
+  "product": "Echo",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/obfuscated-otav3-9/e9dec347bd9894f7b184d7ef7a1d4e74/gst-plugins-base-typefindfunctions-4812.ipk",
+      "params": {},
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "AmazonEcho"
+}

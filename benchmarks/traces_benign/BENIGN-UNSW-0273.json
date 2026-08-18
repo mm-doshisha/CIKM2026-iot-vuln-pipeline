@@ -1,0 +1,31 @@
+{
+  "cve_id": "BENIGN-UNSW-0273",
+  "vendor": "TP-Link",
+  "product": "Smart Plug",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/api/config",
+      "params": {},
+      "headers": {
+        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-T810 Build/MMB29K)"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "TPLinkSmartPlug"
+}

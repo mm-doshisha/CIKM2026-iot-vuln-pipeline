@@ -1,0 +1,43 @@
+{
+  "cve_id": "BENIGN-UNSW-0270",
+  "vendor": "TP-Link",
+  "product": "Cloud Camera",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/getipinfo.php",
+      "params": {
+        "id": "f4:f2:6d:93:51:f1",
+        "pinCode": "c33f52b54ae3a25f3f09b2c4c20f51c8"
+      },
+      "headers": {
+        "User-Agent": "PHP FirePHP/0.7.4"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "TPLinkCamera",
+  "sampling": {
+    "method": "stratified",
+    "seed": 42,
+    "source_population": 11614,
+    "target_n": 281,
+    "max_per_device": 30,
+    "device": "TPLinkCamera",
+    "http_method": "GET"
+  }
+}

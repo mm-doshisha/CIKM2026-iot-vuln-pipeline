@@ -1,0 +1,31 @@
+{
+  "cve_id": "BENIGN-UNSW-00616",
+  "vendor": "Amazon",
+  "product": "Echo",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/kindle-wifi/wifistub-echo.html",
+      "params": {},
+      "headers": {
+        "User-Agent": "Mozilla /5.0 (Linux; like iPhone; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "AmazonEcho"
+}

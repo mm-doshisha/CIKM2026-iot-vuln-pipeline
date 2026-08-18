@@ -1,0 +1,38 @@
+{
+  "cve_id": "BENIGN-UNSW-0088",
+  "vendor": "Pix-Star",
+  "product": "Photo Frame",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "NOTIFY",
+      "path": "/0b7a0eef-fcd5-4d67-a769-ad30ce3f8a9d",
+      "params": {},
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "PixStarPhotoFrame",
+  "sampling": {
+    "method": "stratified",
+    "seed": 42,
+    "source_population": 11614,
+    "target_n": 281,
+    "max_per_device": 30,
+    "device": "PixStarPhotoFrame",
+    "http_method": "NOTIFY"
+  }
+}

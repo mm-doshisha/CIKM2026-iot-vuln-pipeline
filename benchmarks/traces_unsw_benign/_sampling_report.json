@@ -1,0 +1,184 @@
+{
+  "dataset": "UNSW-IoTraffic",
+  "citation": "Wannigama et al., IEEE Data Descriptions, 2025. DOI:10.5061/dryad.w0vt4b94b",
+  "license": "CC0 1.0",
+  "total_population": 11614,
+  "sample_size": 281,
+  "seed": 42,
+  "max_per_device": 30,
+  "stratification_variables": [
+    "device_category",
+    "http_method"
+  ],
+  "population_device_distribution": {
+    "PhilipsHue": 10531,
+    "AmazonEcho": 619,
+    "TribySpeaker": 110,
+    "HPPrinter": 86,
+    "NetatmoWelcome": 57,
+    "BelkinWemoSwitch": 50,
+    "BelkinWemoMotionSensor": 47,
+    "BelkinCamera": 30,
+    "TPLinkCamera": 19,
+    "WithingsSleepSensor": 18,
+    "SamsungCamera": 15,
+    "PixStarPhotoFrame": 8,
+    "WithingsBabyMonitor": 7,
+    "iHome": 5,
+    "AugustDoorBell": 3,
+    "WithingsSmartScale_": 3,
+    "CanaryCamera": 2,
+    "NestDropCam": 1,
+    "NestProtect": 1,
+    "RingDoorBell": 1,
+    "TPLinkSmartPlug": 1
+  },
+  "sample_device_distribution": {
+    "AmazonEcho": 30,
+    "BelkinWemoSwitch": 30,
+    "HPPrinter": 30,
+    "NetatmoWelcome": 30,
+    "PhilipsHue": 30,
+    "TribySpeaker": 26,
+    "BelkinWemoMotionSensor": 24,
+    "BelkinCamera": 15,
+    "WithingsSleepSensor": 15,
+    "SamsungCamera": 12,
+    "TPLinkCamera": 11,
+    "PixStarPhotoFrame": 7,
+    "WithingsBabyMonitor": 6,
+    "AugustDoorBell": 3,
+    "WithingsSmartScale_": 3,
+    "iHome": 3,
+    "CanaryCamera": 2,
+    "NestDropCam": 1,
+    "NestProtect": 1,
+    "RingDoorBell": 1,
+    "TPLinkSmartPlug": 1
+  },
+  "population_method_distribution": {
+    "POST": 10561,
+    "GET": 972,
+    "SUBSCRIBE": 32,
+    "PUT": 25,
+    "NOTIFY": 20,
+    "HEAD": 2,
+    "OPTIONS": 2
+  },
+  "sample_method_distribution": {
+    "GET": 182,
+    "POST": 65,
+    "SUBSCRIBE": 15,
+    "NOTIFY": 8,
+    "PUT": 7,
+    "HEAD": 2,
+    "OPTIONS": 2
+  },
+  "path_diversity": {
+    "AmazonEcho": {
+      "population_paths": 617,
+      "sample_paths": 30,
+      "sample_count": 30
+    },
+    "AugustDoorBell": {
+      "population_paths": 3,
+      "sample_paths": 3,
+      "sample_count": 3
+    },
+    "BelkinCamera": {
+      "population_paths": 10,
+      "sample_paths": 9,
+      "sample_count": 15
+    },
+    "BelkinWemoMotionSensor": {
+      "population_paths": 20,
+      "sample_paths": 16,
+      "sample_count": 24
+    },
+    "BelkinWemoSwitch": {
+      "population_paths": 20,
+      "sample_paths": 19,
+      "sample_count": 30
+    },
+    "CanaryCamera": {
+      "population_paths": 2,
+      "sample_paths": 2,
+      "sample_count": 2
+    },
+    "HPPrinter": {
+      "population_paths": 61,
+      "sample_paths": 25,
+      "sample_count": 30
+    },
+    "NestDropCam": {
+      "population_paths": 1,
+      "sample_paths": 1,
+      "sample_count": 1
+    },
+    "NestProtect": {
+      "population_paths": 1,
+      "sample_paths": 1,
+      "sample_count": 1
+    },
+    "NetatmoWelcome": {
+      "population_paths": 36,
+      "sample_paths": 23,
+      "sample_count": 30
+    },
+    "PhilipsHue": {
+      "population_paths": 36,
+      "sample_paths": 4,
+      "sample_count": 30
+    },
+    "PixStarPhotoFrame": {
+      "population_paths": 8,
+      "sample_paths": 7,
+      "sample_count": 7
+    },
+    "RingDoorBell": {
+      "population_paths": 1,
+      "sample_paths": 1,
+      "sample_count": 1
+    },
+    "SamsungCamera": {
+      "population_paths": 10,
+      "sample_paths": 10,
+      "sample_count": 12
+    },
+    "TPLinkCamera": {
+      "population_paths": 16,
+      "sample_paths": 11,
+      "sample_count": 11
+    },
+    "TPLinkSmartPlug": {
+      "population_paths": 1,
+      "sample_paths": 1,
+      "sample_count": 1
+    },
+    "TribySpeaker": {
+      "population_paths": 13,
+      "sample_paths": 10,
+      "sample_count": 26
+    },
+    "WithingsBabyMonitor": {
+      "population_paths": 7,
+      "sample_paths": 6,
+      "sample_count": 6
+    },
+    "WithingsSleepSensor": {
+      "population_paths": 14,
+      "sample_paths": 12,
+      "sample_count": 15
+    },
+    "WithingsSmartScale_": {
+      "population_paths": 3,
+      "sample_paths": 3,
+      "sample_count": 3
+    },
+    "iHome": {
+      "population_paths": 3,
+      "sample_paths": 3,
+      "sample_count": 3
+    }
+  }
+}

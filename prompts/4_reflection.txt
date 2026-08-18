@@ -1,0 +1,66 @@
+## Reflection / Re-synthesis Direction (_generate_reflection)
+
+After a CEGIS verification failure, this LLM call reflects on
+the failed attempt and generates guidance for the next iteration.
+
+```python
+    def _generate_reflection(self, analysis: dict, ce: dict,
+                             reflections: list[str],
+                             blackboard: dict = None) -> str:
+        """Generate a natural-language reflection on why the test failed.
+
+        When blackboard is provided (A4), includes tried condition patterns
+        for richer context. Without blackboard (A3), uses only failure info
+        and previous reflections.
+        """
+        hyp = analysis.get("attack_hypothesis", {})
+        failed_test = ce.get("failed_test", "unknown") if ce else "unknown"
+        details = ce.get("details", "") if ce else ""
+        diagnosis = (ce.get("llm_diagnosis", {}) or {}) if ce else {}
+
+        past = ""
+        if reflections:
+            past = "## Previous Reflections\n"
+            for i, r in enumerate(reflections[-3:]):
+                past += f"{i+1}. {r}\n"
+
+        tried_section = ""
+        if blackboard:
+            tried = blackboard.get("tried_conditions", [])
+            if tried:
+                tried_section = "## Detection Patterns Already Tried\n"
+                for tc in tried[-3:]:
+                    cond = str(tc.get("condition", ""))[:60]
+                    reason = str(tc.get("reason", ""))[:80]
+                    tried_section += f"- `{cond}` -> {reason}\n"
+                tried_section += "Next attempt must use a fundamentally different pattern.\n"
+
+        prompt = f"""A detection condition synthesis attempt failed.
+
+## Failed Step: {failed_test}
+Details: {str(details)[:300]}
+Diagnosis: {json.dumps(diagnosis, default=str)[:200]}
+
+## Hypothesis
+param: {hyp.get("dangerous_param")}
+syntax: {hyp.get("payload_syntax", "")}
+
+{past}
+{tried_section}
+Write a 2-3 sentence reflection: what went wrong, why, and what structurally different approach to try next.
+Return ONLY the reflection text, no JSON. /no_think"""
+
+        messages = [
+            {"role": "system",
+             "content": "You are a security researcher reflecting on a failed "
+                        "detection attempt. Write a concise, actionable reflection."},
+            {"role": "user", "content": prompt},
+        ]
+        try:
+            return _call_llm(messages, temperature=TEMP_STRUCTURED,
+                             max_tokens=200).strip()
+        except Exception as e:
+            logger.warning("Reflection generation failed: %s", e)
+            return f"Failed test {failed_test}: {str(details)[:100]}"
+
+```

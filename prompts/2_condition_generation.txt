@@ -1,0 +1,17 @@
+## Detection Condition Generation (CEGIS Synthesizer)
+
+The LLM generates a Python boolean expression that distinguishes
+attack values from benign values for the identified parameter.
+This condition is used for CEGIS verification only and is NOT
+passed to the deterministic compiler.
+
+### Function: skeleton._generate_detection_condition
+
+    messages = [
+        {"role": "system",
+         "content": "## Output\nOutput ONLY a Python boolean expression. No markdown, no explanation. /no_think"},
+        {"role": "user", "content": prompt},
+    ]
+
+    raw = _call_llm(messages, temperature=TEMP_GENERATIVE, max_tokens=256)
+    raw = _call_llm(messages, temperature=TEMP_GENERATIVE, max_tokens=256)

@@ -1,0 +1,124 @@
+## Counterexample Diagnosis (_analyze_and_direct)
+
+When a CEGIS iteration fails, this LLM call diagnoses the root
+cause of the failure and suggests a direction for the next
+synthesis attempt.
+
+        prompt = f"""A Boolean expression synthesis attempt failed in a CEGIS verification loop. Analyze and direct the next attempt.
+{failure_detail}
+param: {hyp.get("dangerous_param")}
+structural_properties: {value_desc}
+{past_section}
+        messages = [
+            {"role": "system",
+             "content": ("You are a program synthesis assistant. "
+            {"role": "user", "content": prompt},
+
+### Full function source:
+```python
+    def _analyze_and_direct(self, analysis: dict, ce: dict,
+                            blackboard: dict, gen_result: dict = None) -> dict:
+        """Analyze failure evidence and produce a specific direction for CodeGen.
+
+        Replaces the 4-choice _plan_next_action with free-form analysis.
+        The LLM examines what went wrong and outputs a concrete instruction
+        for how to write the next detection condition differently.
+        """
+        hyp = analysis.get("attack_hypothesis", {})
+        failed_test = ce.get("failed_test", "unknown") if ce else "unknown"
+        diagnosis = (ce.get("llm_diagnosis", {}) or {}) if ce else {}
+
+        # Build failure detail section
+        if failed_test == "CONDITION_GEN_FAILED" and gen_result:
+            rejection_reasons = gen_result.get("rejection_reasons", [])
+            failure_detail = "Critic rejected all condition attempts:\n"
+            for reason in rejection_reasons[-5:]:
+                failure_detail += f"  - {reason[:120]}\n"
+        elif diagnosis:
+            failure_detail = (
+                f"Root cause: {diagnosis.get('root_cause', 'unknown')}\n"
+                f"Specific fix attempted: {diagnosis.get('specific_fix', 'none')}")
+        else:
+            failure_detail = ce.get("details", "unknown") if ce else "unknown"
+
+        # Build past attempts section from blackboard
+        past_section = ""
+        if blackboard and not self.stateless_loop:
+            if self.reflexion_mode:
+                reflections = blackboard.get("reflections", [])
+                if reflections:
+                    past_section += "## Previous Reflections\n"
+                    for i, r in enumerate(reflections[-5:]):
+                        past_section += f"  {i+1}. {r}\n"
+            else:
+                hist = blackboard.get("diagnosis_history", [])
+                if hist:
+                    lines = []
+                    for i, d in enumerate(hist[-5:]):
+                        fix = d.get("specific_fix", "unknown")[:80]
+                        ft = d.get("failed_test", "?")
+                        lines.append(f"  {i+1}. \"{fix}\" -> {ft} FAIL")
+                    past_section += "## Past Fix Directions (ALL FAILED - do NOT repeat)\n"
+                    past_section += "\n".join(lines) + "\n"
+
+                if not self.suppress_condition_memory:
+                    tried = blackboard.get("tried_conditions", [])
+                    if tried:
+                        past_section += "\n## Past Conditions (ALL REJECTED)\n"
+                        for tc in tried[-5:]:
+                            cond = str(tc.get("condition", ""))[:60]
+                            reason = str(tc.get("reason", ""))[:200]
+                            past_section += f"  - `{cond}` : {reason}\n"
+
+        attack_value = hyp.get("identified_param_value") or ""
+        if not attack_value and gen_result:
+            attack_value = gen_result.get("attack_value", "")
+
+        from src.hypothesis.skeleton import _describe_attack_value
+        value_desc = _describe_attack_value(str(attack_value))
+
+        prompt = f"""A Boolean expression synthesis attempt failed in a CEGIS verification loop. Analyze and direct the next attempt.
+
+## Failed Step: {failed_test}
+{failure_detail}
+
+## Synthesis Target
+param: {hyp.get("dangerous_param")}
+structural_properties: {value_desc}
+
+{past_section}
+## Your Task
+1. Analyze WHY the previous attempts all failed (one sentence).
+2. Propose a SPECIFIC, CONCRETE synthesis approach that is fundamentally
+   different from all past attempts listed above.
+
+The approach must be expressible as: `return bool(EXPR)` where EXPR uses
+only `value` (str), `re` module, and basic builtins (len, any, all, ord, chr).
+
+Return JSON:
+{{"root_cause": "<one sentence: why past attempts failed>", "direction": "<specific instruction: what synthesis approach to use next, with example pattern if possible>", "is_hypothesis_wrong": true/false}}
+/no_think"""
+
+        messages = [
+            {"role": "system",
+             "content": ("You are a program synthesis assistant. "
+                         "Analyze why a Boolean expression generation loop keeps failing "
+                         "and produce a concrete direction for the next synthesis attempt. "
+                         "Return ONLY JSON.")},
+            {"role": "user", "content": prompt},
+        ]
+
+        try:
+            raw = _call_llm(messages, temperature=TEMP_STRUCTURED, max_tokens=600)
+            result = _extract_json(raw, "analyze_and_direct")
+            logger.info("  Direction: %s", str(result.get("direction", ""))[:100])
+            return result
+        except Exception as e:
+            logger.warning("  _analyze_and_direct failed: %s", e)
+            return {
+                "root_cause": "analysis failed",
+                "direction": "Try a completely different detection approach.",
+                "is_hypothesis_wrong": False,
+            }
+
+```

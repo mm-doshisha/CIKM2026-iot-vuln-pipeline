@@ -1,0 +1,149 @@
+Bootstrap: docker
+From: ubuntu:22.04
+
+# Apptainer translation of docker/Dockerfile.modsecurity-crs for HPC nodes, where
+# there is no Docker and no host root. Build as a --sandbox on the login node
+# (fakeroot makes apt/make-install work; --sandbox skips mksquashfs, which fails
+# on the login node's thread ulimit). Run read-only with ONE writable bind dir:
+#   apptainer run -B <hostdir>:/nginxwork --env PARANOIA_LEVEL=<1|2> <sandbox>
+#
+# Why a bind dir (not --writable-tmpfs): apptainer leaves /run, /var/log and the
+# fuse-overlay paths non-writable for an unprivileged user, so nginx could not
+# create its pid/temp/log. All run-time writes (nginx pid+temp, the generated
+# main.conf) go to /nginxwork; error_log->stderr and access_log off; modsec audit
+# off. nginx listens on 8080 (unprivileged) as a reverse proxy in front of a local
+# static-200 backend on 8081: ModSecurity runs in the ACCESS phase BEFORE proxy_pass,
+# so a CRS-flagged request returns 403 while a clean one is proxied to 200. (A bare
+# `return 200` short-circuits in the REWRITE phase and bypasses ModSecurity.)
+#
+# Pins (recorded in spec S3): ModSecurity v3.0.13, ModSecurity-nginx v1.0.3,
+# OWASP coreruleset v4.10.0. The exact CRS commit -> /etc/modsecurity/crs_commit.txt.
+
+%post
+    set -e
+    export DEBIAN_FRONTEND=noninteractive
+    MODSEC_V3_VERSION=v3.0.13
+    MODSEC_NGINX_VERSION=v1.0.3
+    CRS_V4_TAG=v4.10.0
+    JOBS=8
+
+    # Under fakeroot the nginx package's postinst (invoke-rc.d / service start)
+    # aborts dpkg. Standard container fix: policy-rc.d refusing startup + stub.
+    printf '#!/bin/sh\nexit 101\n' > /usr/sbin/policy-rc.d && chmod +x /usr/sbin/policy-rc.d
+    ln -sf /bin/true /usr/sbin/invoke-rc.d
+
+    apt-get update && apt-get install -y --no-install-recommends \
+        -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
+        git ca-certificates build-essential automake autoconf libtool \
+        pkg-config gawk bison flex \
+        libcurl4-openssl-dev libpcre2-dev libpcre3-dev libxml2-dev \
+        libyajl-dev liblmdb-dev libgeoip-dev libssl-dev zlib1g-dev \
+        nginx-common wget nginx \
+        libcurl4 libpcre2-8-0 libxml2 libyajl2 liblmdb0 libgeoip1
+    rm -rf /var/lib/apt/lists/*
+
+    # libmodsecurity v3
+    git clone --depth 1 --branch "${MODSEC_V3_VERSION}" --recursive \
+        https://github.com/owasp-modsecurity/ModSecurity /src/ModSecurity
+    cd /src/ModSecurity && ./build.sh && ./configure && make -j"${JOBS}" && make install
+
+    # nginx source matching installed nginx + ModSecurity-nginx connector module.
+    # Ubuntu's `nginx -v` prints "nginx/1.18.0 (Ubuntu)"; extract ONLY the number.
+    NGINX_VER="$(nginx -v 2>&1 | sed -E 's#.*nginx/([0-9.]+).*#\1#')"
+    echo "NGINX_VER=${NGINX_VER}"
+    wget -q "http://nginx.org/download/nginx-${NGINX_VER}.tar.gz" -O /src/nginx.tgz
+    mkdir -p /src/nginx && tar -xzf /src/nginx.tgz -C /src/nginx --strip-components=1
+    git clone --depth 1 --branch "${MODSEC_NGINX_VERSION}" \
+        https://github.com/owasp-modsecurity/ModSecurity-nginx /src/modsec-nginx
+    cd /src/nginx && ./configure --with-compat --add-dynamic-module=/src/modsec-nginx \
+        && make -j"${JOBS}" modules
+    mkdir -p /usr/lib/nginx/modules
+    cp objs/ngx_http_modsecurity_module.so /usr/lib/nginx/modules/
+
+    # modsecurity config + unicode mapping
+    mkdir -p /etc/modsecurity
+    cp /src/ModSecurity/unicode.mapping /etc/modsecurity/unicode.mapping
+    cp /src/ModSecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
+    ldconfig
+
+    # OWASP CRS v4
+    git clone --depth 1 --branch "${CRS_V4_TAG}" \
+        https://github.com/coreruleset/coreruleset /etc/modsecurity/crs
+    cp /etc/modsecurity/crs/crs-setup.conf.example /etc/modsecurity/crs/crs-setup.conf
+    cp /etc/modsecurity/crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example \
+       /etc/modsecurity/crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf || true
+    cp /etc/modsecurity/crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf.example \
+       /etc/modsecurity/crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf || true
+    git -C /etc/modsecurity/crs rev-parse HEAD > /etc/modsecurity/crs_commit.txt
+
+    # engine ON. CRS v4 anomaly mode + rule 949110 (deny,status:403) do the blocking;
+    # do NOT add a second phase:2 SecDefaultAction (conflicts with crs-setup.conf).
+    # Audit log off + tmp/data dirs in the writable bind (sandbox root is read-only).
+    sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf
+    sed -i 's/^SecAuditEngine.*/SecAuditEngine Off/' /etc/modsecurity/modsecurity.conf
+    sed -i 's#^SecTmpDir.*#SecTmpDir /nginxwork#; s#^SecDataDir.*#SecDataDir /nginxwork#' \
+        /etc/modsecurity/modsecurity.conf
+    mkdir -p /nginxwork && chmod 777 /nginxwork
+
+    # nginx: modsec reverse proxy (8080) -> static-200 backend (8081). All writes -> /nginxwork.
+    cat > /etc/nginx/nginx.conf <<'NGINXEOF'
+load_module modules/ngx_http_modsecurity_module.so;
+error_log stderr info;
+pid /nginxwork/nginx.pid;
+worker_processes auto;
+events { worker_connections 1024; }
+http {
+    access_log off;
+    client_body_temp_path /nginxwork/cbt;
+    proxy_temp_path /nginxwork/pt;
+    fastcgi_temp_path /nginxwork/ft;
+    uwsgi_temp_path /nginxwork/ut;
+    scgi_temp_path /nginxwork/st;
+    server {
+        listen 8080;
+        server_name _;
+        modsecurity on;
+        modsecurity_rules_file /nginxwork/main.conf;
+        location / { proxy_pass http://127.0.0.1:8081; }
+    }
+    server {
+        listen 8081;
+        server_name _;
+        modsecurity off;
+        location / { return 200 "ok\n"; }
+    }
+}
+NGINXEOF
+
+    cat > /etc/modsecurity/main.conf.tmpl <<'MAINEOF'
+Include /etc/modsecurity/modsecurity.conf
+Include /etc/modsecurity/crs/crs-setup.conf
+
+# Set CRS paranoia level (substituted from $PARANOIA_LEVEL at startup).
+SecAction "id:900000,phase:1,nolog,pass,t:none,setvar:tx.blocking_paranoia_level=__PARANOIA_LEVEL__,setvar:tx.detection_paranoia_level=__PARANOIA_LEVEL__"
+
+Include /etc/modsecurity/crs/rules/*.conf
+MAINEOF
+
+    cat > /entrypoint.sh <<'ENTRYEOF'
+#!/bin/sh
+set -e
+: "${PARANOIA_LEVEL:=1}"
+# main.conf is generated into the writable bind dir (sandbox /etc is read-only at run)
+sed "s/__PARANOIA_LEVEL__/${PARANOIA_LEVEL}/g" \
+    /etc/modsecurity/main.conf.tmpl > /nginxwork/main.conf
+echo "OWASP CRS commit: $(cat /etc/modsecurity/crs_commit.txt 2>/dev/null)"
+echo "Paranoia level:   ${PARANOIA_LEVEL}"
+nginx -t
+exec nginx -g 'daemon off;'
+ENTRYEOF
+    chmod +x /entrypoint.sh
+
+    # shrink: drop build trees (keep compiled libs/modules already installed)
+    rm -rf /src
+
+%environment
+    export PARANOIA_LEVEL=1
+
+%runscript
+    exec /entrypoint.sh

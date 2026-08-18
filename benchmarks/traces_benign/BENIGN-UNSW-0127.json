@@ -1,0 +1,32 @@
+{
+  "cve_id": "BENIGN-UNSW-0127",
+  "vendor": "Invoxia",
+  "product": "Triby Speaker",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/esdk-fire-and-forget/",
+      "params": {
+        "key_id": "1",
+        "value": "C9I1NQxZAkwVGpmKIGBShCemNUKXDGwBucJehCMjmAxbPkByq4UATU53Ci3xvmVB+CzQQL0ZkhU6HpnYBK5hBkQnlr66NZNQJ2zZk2e9WHOGEFtzDpuWGITMDwtoVH7sjaA4PUn/oDRL9aK+tcfcQbbH2agsfkxNvjqJsG/voXjw6op7YuH8wR+ewPAzYq5rMOjPNCWCI0zvTrLIEkVl7vyraV7EIjW3kYxi81U7zi4R9e5cSsb4Mn64NJGxJwT4wLazGnRYv07LEm4Fa46yyhPSyxDt49Q5/7sbBCJ0+2Ue+rLTLAQS6t/sJvbo2RhKGUYux/9SkvvvCAnZTPD0Sxp2vN87y7rWoo8JgjiDHqrczuNxxwvzy1REXWXGYAyLXagmBUB1I0CixNgT5EP1vDAbvS0fwjGtOjs="
+      },
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "TribySpeaker"
+}

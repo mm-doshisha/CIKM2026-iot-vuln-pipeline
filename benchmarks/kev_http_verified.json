@@ -1,0 +1,2725 @@
+{
+  "http": [
+    {
+      "cve": "CVE-2025-29635",
+      "vendor": "D-Link",
+      "product": "DIR-823X",
+      "class": "CMDi",
+      "name": "D-Link DIR-823X Command Injection Vulnerability",
+      "desc": "D-Link DIR-823X contains a command injection vulnerability that allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2026-20122",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manger",
+      "class": "Other",
+      "name": "Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability",
+      "desc": "Cisco Catalyst SD-WAN Manager contains an incorrect use of privileged APIs vulnerability due to improper file handling on the API interface of an affected system. An attacker could exploit this vulnerability by uploading a malicious file on the local file system. A successful exploit could allow the attacker to overwrite arbitrary files on the affected system and gain vmanage user privileges.",
+      "proto_reason": "product:sd-wan m"
+    },
+    {
+      "cve": "CVE-2026-20133",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "class": "InfoLeak",
+      "name": "Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+      "desc": "Cisco Catalyst SD-WAN Manager contains an exposure of sensitive information to an unauthorized actor vulnerability that could allow remote attackers to view sensitive information on affected systems.",
+      "proto_reason": "product:sd-wan m"
+    },
+    {
+      "cve": "CVE-2026-20128",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Manager",
+      "class": "Other",
+      "name": "Cisco Catalyst SD-WAN Manager Storing Passwords in a Recoverable Format Vulnerability",
+      "desc": "Cisco Catalyst SD-WAN Manager contains a storing passwords in a recoverable format vulnerability that allows an authenticated, local attacker to gain DCA user privileges by accessing a credential file for the DCA user on the filesystem as a low-privileged user.",
+      "proto_reason": "product:sd-wan m"
+    },
+    {
+      "cve": "CVE-2026-3055",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "class": "Other",
+      "name": "Citrix NetScaler Out-of-Bounds Read Vulnerability",
+      "desc": "Citrix NetScaler ADC (formerly Citrix ADC), NetScaler Gateway (formerly Citrix Gateway) and NetScaler ADC FIPS and NDcPP contain an out-of-bounds reads vulnerability when configured as a SAML IDP leading to memory overread.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2026-20131",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Management Center (FMC)",
+      "class": "Other",
+      "name": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability",
+      "desc": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain a deserialization of untrusted data vulnerability in the web-based management interface that could allow an unauthenticated, remote attacker to execute arbitrary Java code as root on an affected device.",
+      "proto_reason": "product:firewall management center"
+    },
+    {
+      "cve": "CVE-2026-20045",
+      "vendor": "Cisco",
+      "product": "Unified Communications Manager",
+      "class": "CMDi",
+      "name": "Cisco Unified Communications Products Code Injection Vulnerability",
+      "desc": "Cisco Unified Communications Manager (Unified CM), Cisco Unified Communications Manager Session Management Edition (Unified CM SME), Cisco Unified Communications Manager IM & Presence Service (Unified CM IM&P), Cisco Unity Connection, and Cisco Webex Calling Dedicated Instance contain a code injection vulnerability that could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root.",
+      "proto_reason": "product:unified communications"
+    },
+    {
+      "cve": "CVE-2023-52163",
+      "vendor": "Digiever",
+      "product": "DS-2105 Pro",
+      "class": "CMDi",
+      "name": "Digiever DS-2105 Pro Missing Authorization Vulnerability",
+      "desc": "Digiever DS-2105 Pro contains a missing authorization vulnerability which could allow for command injection via time_tzsetup.cgi.",
+      "proto_reason": "product:ds-2105"
+    },
+    {
+      "cve": "CVE-2025-14733",
+      "vendor": "WatchGuard",
+      "product": "Firebox",
+      "class": "CMDi",
+      "name": "WatchGuard Firebox Out of Bounds Write Vulnerability",
+      "desc": "WatchGuard Fireware OS iked process contains an out of bounds write vulnerability in the OS iked process. This vulnerability may allow a remote unauthenticated attacker to execute arbitrary code and affects both the mobile user VPN with IKEv2 and the branch office VPN using IKEv2 when configured with a dynamic gateway peer.",
+      "proto_reason": "product:firebox"
+    },
+    {
+      "cve": "CVE-2025-40602",
+      "vendor": "SonicWall",
+      "product": "SMA1000 appliance",
+      "class": "AuthBypass",
+      "name": "SonicWall SMA1000 Missing Authorization Vulnerability",
+      "desc": "SonicWall SMA1000 contains a missing authorization vulnerability that could allow for privilege escalation appliance management console (AMC) of affected devices.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2018-4063",
+      "vendor": "Sierra Wireless",
+      "product": "AirLink ALEOS",
+      "class": "Other",
+      "name": "Sierra Wireless AirLink ALEOS Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "desc": "Sierra Wireless AirLink ALEOS contains an unrestricted upload of file with dangerous type vulnerability. A specially crafted HTTP request can upload a file, resulting in executable code being uploaded, and routable, to the webserver. An attacker can make an authenticated HTTP request to trigger this vulnerability. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:airlink"
+    },
+    {
+      "cve": "CVE-2025-58034",
+      "vendor": "Fortinet",
+      "product": "FortiWeb",
+      "class": "CMDi",
+      "name": "Fortinet FortiWeb OS Command Injection Vulnerability",
+      "desc": "Fortinet FortiWeb contains an OS command Injection vulnerability that may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests or CLI commands.",
+      "proto_reason": "product:fortiweb"
+    },
+    {
+      "cve": "CVE-2025-64446",
+      "vendor": "Fortinet",
+      "product": "FortiWeb",
+      "class": "PT",
+      "name": "Fortinet FortiWeb Path Traversal Vulnerability",
+      "desc": "Fortinet FortiWeb contains a relative path traversal vulnerability that may allow an unauthenticated attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests.",
+      "proto_reason": "product:fortiweb"
+    },
+    {
+      "cve": "CVE-2025-9242",
+      "vendor": "WatchGuard",
+      "product": "Firebox",
+      "class": "CMDi",
+      "name": "WatchGuard Firebox Out-of-Bounds Write Vulnerability",
+      "desc": "WatchGuard Firebox contains an out-of-bounds write vulnerability in the OS iked process that may allow a remote unauthenticated attacker to execute arbitrary code.",
+      "proto_reason": "product:firebox"
+    },
+    {
+      "cve": "CVE-2015-7755",
+      "vendor": "Juniper",
+      "product": "ScreenOS",
+      "class": "AuthBypass",
+      "name": "Juniper ScreenOS Improper Authentication Vulnerability",
+      "desc": "Juniper ScreenOS contains an improper authentication vulnerability that could allow unauthorized remote administrative access to the device.",
+      "proto_reason": "product:screenos"
+    },
+    {
+      "cve": "CVE-2025-20362",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense",
+      "class": "AuthBypass",
+      "name": "Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability",
+      "desc": "Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Software VPN Web Server contain a missing authorization vulnerability. This vulnerability could be chained with CVE-2025-20333.",
+      "proto_reason": "desc:web server"
+    },
+    {
+      "cve": "CVE-2025-20333",
+      "vendor": "Cisco",
+      "product": "Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense",
+      "class": "CMDi",
+      "name": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability",
+      "desc": "Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Software VPN Web Server contain a buffer overflow vulnerability that allows for remote code execution. This vulnerability could be chained with CVE-2025-20362.",
+      "proto_reason": "desc:web server"
+    },
+    {
+      "cve": "CVE-2023-50224",
+      "vendor": "TP-Link",
+      "product": "TL-WR841N",
+      "class": "AuthBypass",
+      "name": "TP-Link TL-WR841N Authentication Bypass by Spoofing Vulnerability",
+      "desc": "TP-Link TL-WR841N contains an authentication bypass by spoofing vulnerability within the httpd service, which listens on TCP port 80 by default, leading to the disclose of stored credentials. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:tl-wr"
+    },
+    {
+      "cve": "CVE-2020-24363",
+      "vendor": "TP-Link",
+      "product": "TL-WA855RE",
+      "class": "AuthBypass",
+      "name": "TP-link TL-WA855RE Missing Authentication for Critical Function Vulnerability",
+      "desc": "TP-link TL-WA855RE contains a missing authentication for critical function vulnerability. This vulnerability could allow an unauthenticated attacker (on the same network) to submit a TDDP_RESET POST request for a factory reset and reboot. The attacker can then obtain incorrect access control by setting a new administrative password. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:tl-wa"
+    },
+    {
+      "cve": "CVE-2025-7775",
+      "vendor": "Citrix",
+      "product": "NetScaler",
+      "class": "CMDi",
+      "name": "Citrix NetScaler Memory Overflow Vulnerability",
+      "desc": "Citrix NetScaler ADC and NetScaler Gateway contain a memory overflow vulnerability that could allow for remote code execution and/or denial of service.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2020-25078",
+      "vendor": "D-Link",
+      "product": "DCS-2530L and DCS-2670L Devices",
+      "class": "InfoLeak",
+      "name": "D-Link DCS-2530L and DCS-2670L Devices Unspecified Vulnerability",
+      "desc": "D-Link DCS-2530L and DCS-2670L devices contains an unspecified vulnerability that could allow for remote administrator password disclosure. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:dcs-"
+    },
+    {
+      "cve": "CVE-2020-25079",
+      "vendor": "D-Link",
+      "product": "DCS-2530L and DCS-2670L Devices",
+      "class": "CMDi",
+      "name": "D-Link DCS-2530L and DCS-2670L Command Injection Vulnerability",
+      "desc": "D-Link DCS-2530L and DCS-2670L devices contains a command injection vulnerability in the cgi-bin/ddns_enc.cgi. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:dcs-"
+    },
+    {
+      "cve": "CVE-2025-25257",
+      "vendor": "Fortinet",
+      "product": "FortiWeb",
+      "class": "Other",
+      "name": "Fortinet FortiWeb SQL Injection Vulnerability",
+      "desc": "Fortinet FortiWeb contains a SQL injection vulnerability that may allow an unauthenticated attacker to execute unauthorized SQL code or commands via crafted HTTP or HTTPs requests.",
+      "proto_reason": "product:fortiweb"
+    },
+    {
+      "cve": "CVE-2025-5777",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and Gateway",
+      "class": "Other",
+      "name": "Citrix NetScaler ADC and Gateway Out-of-Bounds Read Vulnerability",
+      "desc": "Citrix NetScaler ADC and Gateway contain an out-of-bounds read vulnerability due to insufficient input validation. This vulnerability can lead to memory overread when the NetScaler is configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2025-6543",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and Gateway",
+      "class": "Other",
+      "name": "Citrix NetScaler ADC and Gateway Buffer Overflow Vulnerability",
+      "desc": "Citrix NetScaler ADC and Gateway contain a buffer overflow vulnerability leading to unintended control flow and Denial of Service. NetScaler must be configured as Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2019-6693",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS Use of Hard-Coded Credentials Vulnerability",
+      "desc": "Fortinet FortiOS contains a use of hard-coded credentials vulnerability that could allow an attacker to cipher sensitive data in FortiOS configuration backup file via knowledge of the hard-coded key. ",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2024-0769",
+      "vendor": "D-Link",
+      "product": "DIR-859 Router",
+      "class": "PT",
+      "name": " D-Link DIR-859 Router Path Traversal Vulnerability",
+      "desc": "D-Link DIR-859 routers contain a path traversal vulnerability in the file /hedwig.cgi of the component HTTP POST Request Handler. Manipulation of the argument service with the input ../../../../htdocs/webinc/getcfg/DHCPS6.BRIDGE-1.xml allows for the leakage of session data potentially enabling privilege escalation and unauthorized control of the device. This vulnerability affects legacy D-Link products. All associated hardware revisions have reached their end-of-life (EOL) or end-of-service (EOS) life cycle and should be retired and replaced per vendor instructions.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2023-39780",
+      "vendor": "ASUS",
+      "product": "RT-AX55 Routers",
+      "class": "CMDi",
+      "name": "ASUS RT-AX55 Routers OS Command Injection Vulnerability",
+      "desc": "ASUS RT-AX55 devices contain an OS command injection vulnerability that could allow a remote, authenticated attacker to execute arbitrary commands. As represented by CVE-2023-41346.",
+      "proto_reason": "product:rt-ax"
+    },
+    {
+      "cve": "CVE-2025-32756",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "class": "CMDi",
+      "name": "Fortinet Multiple Products Stack-Based Buffer Overflow Vulnerability",
+      "desc": "Fortinet FortiFone, FortiVoice, FortiNDR and FortiMail contain a stack-based overflow vulnerability that may allow a remote unauthenticated attacker to execute arbitrary code or commands via crafted HTTP requests.",
+      "proto_reason": "desc:http request"
+    },
+    {
+      "cve": "CVE-2023-44221",
+      "vendor": "SonicWall",
+      "product": "SMA100 Appliances",
+      "class": "CMDi",
+      "name": "SonicWall SMA100 Appliances OS Command Injection Vulnerability",
+      "desc": "SonicWall SMA100 appliances contain an OS command injection vulnerability in the SSL-VPN management interface that allows a remote, authenticated attacker with administrative privilege to inject arbitrary commands as a 'nobody' user.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2021-20035",
+      "vendor": "SonicWall",
+      "product": "SMA100 Appliances",
+      "class": "CMDi",
+      "name": "SonicWall SMA100 Appliances OS Command Injection Vulnerability",
+      "desc": "SonicWall SMA100 appliances contain an OS command injection vulnerability in the management interface that allows a remote authenticated attacker to inject arbitrary commands as a 'nobody' user, which could potentially lead to code execution.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2025-22457",
+      "vendor": "Ivanti",
+      "product": "Connect Secure, Policy Secure, and ZTA Gateways",
+      "class": "CMDi",
+      "name": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability",
+      "desc": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways contains a stack-based buffer overflow vulnerability that allows a remote unauthenticated attacker to achieve remote code execution. ",
+      "proto_reason": "product:gateway"
+    },
+    {
+      "cve": "CVE-2025-1316",
+      "vendor": "Edimax",
+      "product": "IC-7100 IP Camera",
+      "class": "CMDi",
+      "name": "Edimax IC-7100 IP Camera OS Command Injection Vulnerability",
+      "desc": "Edimax IC-7100 IP camera contains an OS command injection vulnerability due to improper input sanitization that allows an attacker to achieve remote code execution via specially crafted requests. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "product:ic-7100"
+    },
+    {
+      "cve": "CVE-2025-24472",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiProxy",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+      "desc": " Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that allows a remote attacker to gain super-admin privileges via crafted CSF proxy requests.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2025-21590",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "CMDi",
+      "name": "Juniper Junos OS Improper Isolation or Compartmentalization Vulnerability",
+      "desc": "Juniper Junos OS contains an improper isolation or compartmentalization vulnerability. This vulnerability could allows a local attacker with high privileges to inject arbitrary code.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-20118",
+      "vendor": "Cisco",
+      "product": "Small Business RV Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Command Injection Vulnerability",
+      "desc": "Multiple Cisco Small Business RV Series Routers contains a command injection vulnerability in the web-based management interface. Successful exploitation could allow an authenticated, remote attacker to gain root-level privileges and access unauthorized data.",
+      "proto_reason": "product:rv series"
+    },
+    {
+      "cve": "CVE-2025-0111",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "Other",
+      "name": "Palo Alto Networks PAN-OS File Read Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains an external control of file name or path vulnerability. Successful exploitation enables an authenticated attacker with network access to the management web interface to read files on the PAN-OS filesystem that are readable by the “nobody” user.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2025-0108",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "AuthBypass",
+      "name": "Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability in its management web interface. This vulnerability allows an unauthenticated attacker with network access to the management web interface to bypass the authentication normally required and invoke certain PHP scripts.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2024-53704",
+      "vendor": "SonicWall",
+      "product": "SonicOS",
+      "class": "AuthBypass",
+      "name": "SonicWall SonicOS SSLVPN Improper Authentication Vulnerability",
+      "desc": "SonicWall SonicOS contains an improper authentication vulnerability in the SSLVPN authentication mechanism that allows a remote attacker to bypass authentication.",
+      "proto_reason": "product:sonico"
+    },
+    {
+      "cve": "CVE-2024-41710",
+      "vendor": "Mitel",
+      "product": "SIP Phones",
+      "class": "Other",
+      "name": "Mitel SIP Phones Argument Injection Vulnerability",
+      "desc": "Mitel 6800 Series, 6900 Series, and 6900w Series SIP Phones, including the 6970 Conference Unit, contain an argument injection vulnerability due to insufficient parameter sanitization during the boot process. Successful exploitation may allow an attacker to execute arbitrary commands within the context of the system.",
+      "proto_reason": "product:ip phones"
+    },
+    {
+      "cve": "CVE-2024-40890",
+      "vendor": "Zyxel",
+      "product": "DSL CPE Devices",
+      "class": "CMDi",
+      "name": "Zyxel DSL CPE OS Command Injection Vulnerability",
+      "desc": "Multiple Zyxel DSL CPE devices contain a post-authentication command injection vulnerability in the CGI program that could allow an authenticated attacker to execute OS commands via a crafted HTTP request.",
+      "proto_reason": "desc:http request"
+    },
+    {
+      "cve": "CVE-2020-15069",
+      "vendor": "Sophos",
+      "product": "XG Firewall",
+      "class": "CMDi",
+      "name": "Sophos XG Firewall Buffer Overflow Vulnerability",
+      "desc": "Sophos XG Firewall contains a buffer overflow vulnerability that allows for remote code execution via the \"HTTP/S bookmark\" feature.",
+      "proto_reason": "product:xg firewall"
+    },
+    {
+      "cve": "CVE-2020-29574",
+      "vendor": "Sophos",
+      "product": "CyberoamOS",
+      "class": "Other",
+      "name": "CyberoamOS (CROS) SQL Injection Vulnerability",
+      "desc": "CyberoamOS (CROS) contains a SQL injection vulnerability in the WebAdmin that allows an unauthenticated attacker to execute arbitrary SQL statements remotely.",
+      "proto_reason": "product:cyberoam"
+    },
+    {
+      "cve": "CVE-2025-23006",
+      "vendor": "SonicWall",
+      "product": "SMA1000 Appliances",
+      "class": "CMDi",
+      "name": "SonicWall SMA1000 Appliances Deserialization Vulnerability",
+      "desc": "SonicWall SMA1000 Appliance Management Console (AMC) and Central Management Console (CMC) contain a deserialization of untrusted data vulnerability, which can enable a remote, unauthenticated attacker to execute arbitrary OS commands.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2024-55591",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiProxy",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+      "desc": "Fortinet FortiOS and FortiProxy contain an authentication bypass vulnerability that may allow an unauthenticated, remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2025-0282",
+      "vendor": "Ivanti",
+      "product": "Connect Secure, Policy Secure, and ZTA Gateways",
+      "class": "CMDi",
+      "name": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability",
+      "desc": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways contain a stack-based buffer overflow which can lead to unauthenticated remote code execution.",
+      "proto_reason": "product:gateway"
+    },
+    {
+      "cve": "CVE-2024-3393",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "Other",
+      "name": "Palo Alto Networks PAN-OS Malicious DNS Packet Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains a vulnerability in parsing and logging malicious DNS packets in the DNS Security feature that, when exploited, allows an unauthenticated attacker to remotely reboot the firewall. Repeated attempts to trigger this condition will cause the firewall to enter maintenance mode.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2021-40407",
+      "vendor": "Reolink",
+      "product": "RLC-410W IP Camera",
+      "class": "CMDi",
+      "name": "Reolink RLC-410W IP Camera OS Command Injection Vulnerability ",
+      "desc": "Reolink RLC-410W IP cameras contain an authenticated OS command injection vulnerability in the device network settings functionality.",
+      "proto_reason": "product:rlc-410"
+    },
+    {
+      "cve": "CVE-2019-11001",
+      "vendor": "Reolink",
+      "product": "Multiple IP Cameras",
+      "class": "CMDi",
+      "name": "Reolink Multiple IP Cameras OS Command Injection Vulnerability",
+      "desc": "Reolink RLC-410W, C1 Pro, C2 Pro, RLC-422W, and RLC-511W IP cameras contain an authenticated OS command injection vulnerability. This vulnerability allows an authenticated admin to use the \"TestEmail\" functionality to inject and run OS commands as root.",
+      "proto_reason": "product:ip camera"
+    },
+    {
+      "cve": "CVE-2024-11667",
+      "vendor": "Zyxel",
+      "product": "Multiple Firewalls",
+      "class": "PT",
+      "name": "Zyxel Multiple Firewalls Path Traversal Vulnerability",
+      "desc": "Multiple Zyxel firewalls contain a path traversal vulnerability in the web management interface that could allow an attacker to download or upload files via a crafted URL.",
+      "proto_reason": "desc:web management"
+    },
+    {
+      "cve": "CVE-2023-28461",
+      "vendor": "Array Networks ",
+      "product": "AG/vxAG ArrayOS",
+      "class": "AuthBypass",
+      "name": "Array Networks AG and vxAG ArrayOS Missing Authentication for Critical Function Vulnerability",
+      "desc": "Array Networks AG and vxAG ArrayOS contain a missing authentication for critical function vulnerability that allows an attacker to read local files and execute code on the SSL VPN gateway.",
+      "proto_reason": "desc:ssl vpn"
+    },
+    {
+      "cve": "CVE-2024-9474",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "CMDi",
+      "name": "Palo Alto Networks PAN-OS Management Interface OS Command Injection Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains an OS command injection vulnerability that allows for privilege escalation through the web-based management interface for several PAN products, including firewalls and VPN concentrators.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2024-0012",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "AuthBypass",
+      "name": "Palo Alto Networks PAN-OS Management Interface Authentication Bypass Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability in the web-based management interface for several PAN-OS products, including firewalls and VPN concentrators.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2014-2120",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA)",
+      "class": "Other",
+      "name": "Cisco Adaptive Security Appliance (ASA) Cross-Site Scripting (XSS) Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) contains a cross-site scripting (XSS) vulnerability in the WebVPN login page. This vulnerability allows remote attackers to inject arbitrary web script or HTML via an unspecified parameter.",
+      "proto_reason": "desc:login page"
+    },
+    {
+      "cve": "CVE-2024-8956",
+      "vendor": "PTZOptics",
+      "product": "PT30X-SDI/NDI Cameras",
+      "class": "CMDi",
+      "name": "PTZOptics PT30X-SDI/NDI Cameras Authentication Bypass Vulnerability",
+      "desc": "PTZOptics PT30X-SDI/NDI cameras contain an insecure direct object reference (IDOR) vulnerability that allows a remote, attacker to bypass authentication for the /cgi-bin/param.cgi CGI script. If combined with CVE-2024-8957, this can lead to remote code execution as root.",
+      "proto_reason": "desc:cgi-bin"
+    },
+    {
+      "cve": "CVE-2024-8957",
+      "vendor": "PTZOptics",
+      "product": "PT30X-SDI/NDI Cameras",
+      "class": "CMDi",
+      "name": "PTZOptics PT30X-SDI/NDI Cameras OS Command Injection Vulnerability",
+      "desc": "PTZOptics PT30X-SDI/NDI cameras contain an OS command injection vulnerability that allows a remote, authenticated attacker to escalate privileges to root via a crafted payload with the ntp_addr parameter of the /cgi-bin/param.cgi CGI script. ",
+      "proto_reason": "desc:cgi-bin"
+    },
+    {
+      "cve": "CVE-2024-9380",
+      "vendor": "Ivanti",
+      "product": "Cloud Services Appliance (CSA)",
+      "class": "CMDi",
+      "name": "Ivanti Cloud Services Appliance (CSA) OS Command Injection Vulnerability",
+      "desc": "Ivanti Cloud Services Appliance (CSA) contains an OS command injection vulnerability in the administrative console which can allow an authenticated attacker with application admin privileges to pass commands to the underlying OS.",
+      "proto_reason": "product:cloud services appliance"
+    },
+    {
+      "cve": "CVE-2024-9379",
+      "vendor": "Ivanti",
+      "product": "Cloud Services Appliance (CSA)",
+      "class": "Other",
+      "name": "Ivanti Cloud Services Appliance (CSA) SQL Injection Vulnerability",
+      "desc": "Ivanti Cloud Services Appliance (CSA) contains a SQL injection vulnerability in the admin web console in versions prior to 5.0.2, which can allow a remote attacker authenticated as administrator to run arbitrary SQL statements.",
+      "proto_reason": "product:cloud services appliance"
+    },
+    {
+      "cve": "CVE-2020-15415",
+      "vendor": "DrayTek",
+      "product": "Multiple Vigor Routers",
+      "class": "CMDi",
+      "name": "DrayTek Multiple Vigor Routers OS Command Injection Vulnerability",
+      "desc": "DrayTek Vigor3900, Vigor2960, and Vigor300B devices contain an OS command injection vulnerability in cgi-bin/mainfunction.cgi/cvmcfgupload that allows for remote code execution via shell metacharacters in a filename when the text/x-python-script content type is used.",
+      "proto_reason": "product:vigor"
+    },
+    {
+      "cve": "CVE-2023-25280",
+      "vendor": "D-Link",
+      "product": "DIR-820 Router",
+      "class": "CMDi",
+      "name": "D-Link DIR-820 Router OS Command Injection Vulnerability",
+      "desc": "D-Link DIR-820 routers contain an OS command injection vulnerability that allows a remote, unauthenticated attacker to escalate privileges to root via a crafted payload with the ping_addr parameter to ping.ccp.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2024-7593",
+      "vendor": "Ivanti",
+      "product": "Virtual Traffic Manager",
+      "class": "AuthBypass",
+      "name": "Ivanti Virtual Traffic Manager Authentication Bypass Vulnerability",
+      "desc": "Ivanti Virtual Traffic Manager contains an authentication bypass vulnerability that allows a remote, unauthenticated attacker to create a chosen administrator account.",
+      "proto_reason": "product:virtual traffic manager"
+    },
+    {
+      "cve": "CVE-2024-8963",
+      "vendor": "Ivanti",
+      "product": "Cloud Services Appliance (CSA)",
+      "class": "PT",
+      "name": "Ivanti Cloud Services Appliance (CSA) Path Traversal Vulnerability",
+      "desc": "Ivanti Cloud Services Appliance (CSA) contains a path traversal vulnerability that could allow a remote, unauthenticated attacker to access restricted functionality. If CVE-2024-8963 is used in conjunction with CVE-2024-8190, an attacker could bypass admin authentication and execute arbitrary commands on the appliance.",
+      "proto_reason": "product:cloud services appliance"
+    },
+    {
+      "cve": "CVE-2024-8190",
+      "vendor": "Ivanti",
+      "product": "Cloud Services Appliance",
+      "class": "CMDi",
+      "name": "Ivanti Cloud Services Appliance OS Command Injection Vulnerability",
+      "desc": "Ivanti Cloud Services Appliance (CSA) contains an OS command injection vulnerability in the administrative console which can allow an authenticated attacker with application admin privileges to pass commands to the underlying OS.",
+      "proto_reason": "product:cloud services appliance"
+    },
+    {
+      "cve": "CVE-2024-40766",
+      "vendor": "SonicWall",
+      "product": "SonicOS",
+      "class": "AuthBypass",
+      "name": "SonicWall SonicOS Improper Access Control Vulnerability",
+      "desc": "SonicWall SonicOS contains an improper access control vulnerability that could lead to unauthorized resource access and, under certain conditions, may cause the firewall to crash.",
+      "proto_reason": "product:sonico"
+    },
+    {
+      "cve": "CVE-2021-20124",
+      "vendor": "DrayTek",
+      "product": "VigorConnect",
+      "class": "PT",
+      "name": "Draytek VigorConnect Path Traversal Vulnerability ",
+      "desc": "Draytek VigorConnect contains a path traversal vulnerability in the file download functionality of the WebServlet endpoint. An unauthenticated attacker could leverage this vulnerability to download arbitrary files from the underlying operating system with root privileges.",
+      "proto_reason": "product:vigor"
+    },
+    {
+      "cve": "CVE-2021-20123",
+      "vendor": "DrayTek",
+      "product": "VigorConnect",
+      "class": "PT",
+      "name": "Draytek VigorConnect Path Traversal Vulnerability ",
+      "desc": "Draytek VigorConnect contains a path traversal vulnerability in the DownloadFileServlet endpoint. An unauthenticated attacker could leverage this vulnerability to download arbitrary files from the underlying operating system with root privileges. ",
+      "proto_reason": "product:vigor"
+    },
+    {
+      "cve": "CVE-2021-33045",
+      "vendor": "Dahua",
+      "product": "IP Camera Firmware",
+      "class": "AuthBypass",
+      "name": "Dahua IP Camera Authentication Bypass Vulnerability",
+      "desc": "Dahua IP cameras and related products contain an authentication bypass vulnerability when the loopback device is specified by the client during authentication.",
+      "proto_reason": "product:ip camera"
+    },
+    {
+      "cve": "CVE-2021-33044",
+      "vendor": "Dahua",
+      "product": "IP Camera Firmware",
+      "class": "AuthBypass",
+      "name": "Dahua IP Camera Authentication Bypass Vulnerability",
+      "desc": "Dahua IP cameras and related products contain an authentication bypass vulnerability when the NetKeyboard type argument is specified by the client during authentication.",
+      "proto_reason": "product:ip camera"
+    },
+    {
+      "cve": "CVE-2024-24919",
+      "vendor": "Check Point",
+      "product": "Quantum Security Gateways",
+      "class": "InfoLeak",
+      "name": "Check Point Quantum Security Gateways Information Disclosure Vulnerability",
+      "desc": "Check Point Quantum Security Gateways contain an unspecified information disclosure vulnerability. The vulnerability potentially allows an attacker to access information on Gateways connected to the internet, with IPSec VPN, Remote Access VPN or Mobile Access enabled. This issue affects several product lines from Check Point, including CloudGuard Network, Quantum Scalable Chassis, Quantum Security Gateways, and Quantum Spark Appliances.",
+      "proto_reason": "product:gateway"
+    },
+    {
+      "cve": "CVE-2021-40655",
+      "vendor": "D-Link",
+      "product": "DIR-605 Router",
+      "class": "InfoLeak",
+      "name": "D-Link DIR-605 Router Information Disclosure Vulnerability",
+      "desc": "D-Link DIR-605 routers contain an information disclosure vulnerability that allows attackers to obtain a username and password by forging a post request to the /getcfg.php page. ",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2014-100005",
+      "vendor": "D-Link",
+      "product": "DIR-600 Router",
+      "class": "Other",
+      "name": "D-Link DIR-600 Router Cross-Site Request Forgery (CSRF) Vulnerability",
+      "desc": "D-Link DIR-600 routers contain a cross-site request forgery (CSRF) vulnerability that allows an attacker to change router configurations by hijacking an existing administrator session.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2024-3400",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "CMDi",
+      "name": "Palo Alto Networks PAN-OS Command Injection Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS GlobalProtect feature contains a command injection vulnerability that allows an unauthenticated attacker to execute commands with root privileges on the firewall.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2021-44529",
+      "vendor": "Ivanti",
+      "product": "Endpoint Manager Cloud Service Appliance (EPM CSA)",
+      "class": "CMDi",
+      "name": "Ivanti Endpoint Manager Cloud Service Appliance (EPM CSA) Code Injection Vulnerability ",
+      "desc": "Ivanti Endpoint Manager Cloud Service Appliance (EPM CSA) contains a code injection vulnerability that allows an unauthenticated user to execute malicious code with limited permissions (nobody).",
+      "proto_reason": "product:csa"
+    },
+    {
+      "cve": "CVE-2024-21762",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "Other",
+      "name": "Fortinet FortiOS Out-of-Bound Write Vulnerability",
+      "desc": "Fortinet FortiOS contains an out-of-bound write vulnerability that allows a remote unauthenticated attacker to execute code or commands via specially crafted HTTP requests.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2024-21893",
+      "vendor": "Ivanti",
+      "product": "Connect Secure, Policy Secure, and Neurons",
+      "class": "Other",
+      "name": "Ivanti Connect Secure, Policy Secure, and Neurons Server-Side Request Forgery (SSRF) Vulnerability",
+      "desc": "Ivanti Connect Secure (ICS, formerly known as Pulse Connect Secure), Ivanti Policy Secure, and Ivanti Neurons contain a server-side request forgery (SSRF) vulnerability in the SAML component that allows an attacker to access certain restricted resources without authentication.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2023-6549",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "class": "Other",
+      "name": "Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability",
+      "desc": "Citrix NetScaler ADC and NetScaler Gateway contain a buffer overflow vulnerability that allows for a denial-of-service when configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) or AAA virtual server.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2023-6548",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "class": "CMDi",
+      "name": "Citrix NetScaler ADC and NetScaler Gateway Code Injection Vulnerability",
+      "desc": "Citrix NetScaler ADC and NetScaler Gateway contain a code injection vulnerability that allows for authenticated remote code execution on the management interface with access to NSIP, CLIP, or SNIP.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2023-46805",
+      "vendor": "Ivanti",
+      "product": "Connect Secure and Policy Secure",
+      "class": "CMDi",
+      "name": "Ivanti Connect Secure and Policy Secure Authentication Bypass Vulnerability",
+      "desc": "Ivanti Connect Secure (ICS, formerly known as Pulse Connect Secure) and Ivanti Policy Secure gateways contain an authentication bypass vulnerability in the web component that allows an attacker to access restricted resources by bypassing control checks. This vulnerability can be leveraged in conjunction with CVE-2024-21887, a command injection vulnerability.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2024-21887",
+      "vendor": "Ivanti",
+      "product": "Connect Secure and Policy Secure",
+      "class": "CMDi",
+      "name": "Ivanti Connect Secure and Policy Secure Command Injection Vulnerability",
+      "desc": "Ivanti Connect Secure (ICS, formerly known as Pulse Connect Secure) and Ivanti Policy Secure contain a command injection vulnerability in the web components of these products, which can allow an authenticated administrator to send crafted requests to execute code on affected appliances. This vulnerability can be leveraged in conjunction with CVE-2023-46805, an authenticated bypass issue.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2016-20017",
+      "vendor": "D-Link",
+      "product": "DSL-2750B Devices",
+      "class": "CMDi",
+      "name": "D-Link DSL-2750B Devices Command Injection Vulnerability",
+      "desc": "D-Link DSL-2750B devices contain a command injection vulnerability that allows remote, unauthenticated command injection via the login.cgi cli parameter.",
+      "proto_reason": "product:dsl-"
+    },
+    {
+      "cve": "CVE-2023-47565",
+      "vendor": "QNAP",
+      "product": "VioStor NVR",
+      "class": "CMDi",
+      "name": "QNAP VioStor NVR OS Command Injection Vulnerability",
+      "desc": "QNAP VioStar NVR contains an OS command injection vulnerability that allows authenticated users to execute commands via a network.",
+      "proto_reason": "product:viostor"
+    },
+    {
+      "cve": "CVE-2023-1671",
+      "vendor": "Sophos",
+      "product": "Web Appliance",
+      "class": "CMDi",
+      "name": "Sophos Web Appliance Command Injection Vulnerability",
+      "desc": "Sophos Web Appliance contains a command injection vulnerability in the warn-proceed handler that allows for remote code execution.",
+      "proto_reason": "product:web appliance"
+    },
+    {
+      "cve": "CVE-2023-36844",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "Other",
+      "name": "Juniper Junos OS EX Series PHP External Variable Modification Vulnerability",
+      "desc": "Juniper Junos OS on EX Series contains a PHP external variable modification vulnerability that allows an unauthenticated, network-based attacker to control certain, important environment variables. Using a crafted request an attacker is able to modify certain PHP environment variables, leading to partial loss of integrity, which may allow chaining to other vulnerabilities.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-36845",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "Other",
+      "name": "Juniper Junos OS EX Series and SRX Series PHP External Variable Modification Vulnerability",
+      "desc": "Juniper Junos OS on EX Series and SRX Series contains a PHP external variable modification vulnerability that allows an unauthenticated, network-based attacker to control an important environment variable. Using a crafted request, which sets the variable PHPRC, an attacker is able to modify the PHP execution environment allowing the injection und execution of code.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-36846",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "AuthBypass",
+      "name": "Juniper Junos OS SRX Series Missing Authentication for Critical Function Vulnerability",
+      "desc": "Juniper Junos OS on SRX Series contains a missing authentication for critical function vulnerability that allows an unauthenticated, network-based attacker to cause limited impact to the file system integrity. With a specific request to user.php that doesn't require authentication, an attacker is able to upload arbitrary files via J-Web, leading to a loss of integrity for a certain part of the file system, which may allow chaining to other vulnerabilities.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-36847",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "AuthBypass",
+      "name": "Juniper Junos OS EX Series Missing Authentication for Critical Function Vulnerability",
+      "desc": "Juniper Junos OS on EX Series contains a missing authentication for critical function vulnerability that allows an unauthenticated, network-based attacker to cause limited impact to the file system integrity. With a specific request to installAppPackage.php that doesn't require authentication, an attacker is able to upload arbitrary files via J-Web, leading to a loss of integrity for a certain part of the file system, which may allow chaining to other vulnerabilities.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-36851",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "AuthBypass",
+      "name": "Juniper Junos OS SRX Series Missing Authentication for Critical Function Vulnerability",
+      "desc": "Juniper Junos OS on SRX Series contains a missing authentication for critical function vulnerability that allows an unauthenticated, network-based attacker to cause limited impact to the file system integrity. With a specific request to webauth_operation.php that doesn't require authentication, an attacker is able to upload arbitrary files via J-Web, leading to a loss of integrity for a certain part of the file system, which may allow chaining to other vulnerabilities.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2023-20273",
+      "vendor": "Cisco",
+      "product": "Cisco IOS XE Web UI",
+      "class": "CMDi",
+      "name": "Cisco IOS XE Web UI Command Injection Vulnerability",
+      "desc": "Cisco IOS XE contains a command injection vulnerability in the web user interface. When chained with CVE-2023-20198, the attacker can leverage the new local user to elevate privilege to root and write the implant to the file system. Cisco identified CVE-2023-20273 as the vulnerability exploited to deploy the implant. CVE-2021-1435, previously associated with the exploitation events, is no longer believed to be related to this activity.",
+      "proto_reason": "product:ios xe web ui"
+    },
+    {
+      "cve": "CVE-2023-4966",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "class": "InfoLeak",
+      "name": "Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability",
+      "desc": "Citrix NetScaler ADC and NetScaler Gateway contain a buffer overflow vulnerability that allows for sensitive information disclosure when configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) or AAA virtual server.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2023-20198",
+      "vendor": "Cisco",
+      "product": "IOS XE Web UI",
+      "class": "AuthBypass",
+      "name": "Cisco IOS XE Web UI Privilege Escalation Vulnerability",
+      "desc": "Cisco IOS XE Web UI contains a privilege escalation vulnerability in the web user interface that could allow a remote, unauthenticated attacker to create an account with privilege level 15 access. The attacker can then use that account to gain control of the affected device.",
+      "proto_reason": "product:ios xe web ui"
+    },
+    {
+      "cve": "CVE-2017-6884",
+      "vendor": "Zyxel",
+      "product": "EMG2926 Routers",
+      "class": "CMDi",
+      "name": "Zyxel EMG2926 Routers Command Injection Vulnerability",
+      "desc": "Zyxel EMG2926 routers contain a command injection vulnerability located in the diagnostic tools, specifically the nslookup function. A malicious user may exploit numerous vectors to execute malicious commands on the router, such as the ping_ip parameter to the expert/maintenance/diagnostic/nslookup URI.",
+      "proto_reason": "product:emg2926"
+    },
+    {
+      "cve": "CVE-2023-20269",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance and Firepower Threat Defense",
+      "class": "Other",
+      "name": "Cisco Adaptive Security Appliance and Firepower Threat Defense Unauthorized Access Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance and Firepower Threat Defense contain an unauthorized access vulnerability that could allow an unauthenticated, remote attacker to conduct a brute force attack in an attempt to identify valid username and password combinations or establish a clientless SSL VPN session with an unauthorized user.",
+      "proto_reason": "desc:ssl vpn"
+    },
+    {
+      "cve": "CVE-2023-38035",
+      "vendor": "Ivanti",
+      "product": "Sentry",
+      "class": "AuthBypass",
+      "name": "Ivanti Sentry Authentication Bypass Vulnerability",
+      "desc": "Ivanti Sentry, formerly known as MobileIron Sentry, contains an authentication bypass vulnerability that may allow an attacker to bypass authentication controls on the administrative interface due to an insufficiently restrictive Apache HTTPD configuration.",
+      "proto_reason": "product:sentry"
+    },
+    {
+      "cve": "CVE-2017-18368",
+      "vendor": "Zyxel",
+      "product": "P660HN-T1A Routers",
+      "class": "CMDi",
+      "name": "Zyxel P660HN-T1A Routers Command Injection Vulnerability",
+      "desc": "Zyxel P660HN-T1A routers contain a command injection vulnerability in the Remote System Log forwarding function, which is accessible by an unauthenticated user and exploited via the remote_host parameter of the ViewLog.asp page.",
+      "proto_reason": "product:p660hn"
+    },
+    {
+      "cve": "CVE-2023-3519",
+      "vendor": "Citrix",
+      "product": "NetScaler ADC and NetScaler Gateway",
+      "class": "CMDi",
+      "name": "Citrix NetScaler ADC and NetScaler Gateway Code Injection Vulnerability",
+      "desc": "Citrix NetScaler ADC and NetScaler Gateway contains a code injection vulnerability that allows for unauthenticated remote code execution.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2019-20500",
+      "vendor": "D-Link",
+      "product": "DWL-2600AP Access Point",
+      "class": "CMDi",
+      "name": "D-Link DWL-2600AP Access Point Command Injection Vulnerability",
+      "desc": "D-Link DWL-2600AP access point contains an authenticated command injection vulnerability via the Save Configuration functionality in the Web interface, using shell metacharacters in the admin.cgi?action=config_save configBackup or downloadServerip parameter.",
+      "proto_reason": "product:dwl-"
+    },
+    {
+      "cve": "CVE-2023-27992",
+      "vendor": "Zyxel",
+      "product": "Multiple Network-Attached Storage (NAS) Devices",
+      "class": "CMDi",
+      "name": "Zyxel Multiple NAS Devices Command Injection Vulnerability",
+      "desc": "Multiple Zyxel network-attached storage (NAS) devices contain a pre-authentication command injection vulnerability that could allow an unauthenticated attacker to execute commands remotely via a crafted HTTP request.",
+      "proto_reason": "product:nas"
+    },
+    {
+      "cve": "CVE-2023-27997",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiProxy SSL-VPN",
+      "class": "Other",
+      "name": "Fortinet FortiOS and FortiProxy SSL-VPN Heap-Based Buffer Overflow Vulnerability",
+      "desc": "Fortinet FortiOS and FortiProxy SSL-VPN contain a heap-based buffer overflow vulnerability which can allow an unauthenticated, remote attacker to execute code or commands via specifically crafted requests.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2023-1389",
+      "vendor": "TP-Link",
+      "product": "Archer AX21",
+      "class": "CMDi",
+      "name": "TP-Link Archer AX-21 Command Injection Vulnerability",
+      "desc": "TP-Link Archer AX-21 contains a command injection vulnerability that allows for remote code execution.",
+      "proto_reason": "product:archer"
+    },
+    {
+      "cve": "CVE-2022-41328",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "PT",
+      "name": "Fortinet FortiOS Path Traversal Vulnerability",
+      "desc": "Fortinet FortiOS contains a path traversal vulnerability that may allow a local privileged attacker to read and write files via crafted CLI commands.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2022-42475",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "CMDi",
+      "name": "Fortinet FortiOS Heap-Based Buffer Overflow Vulnerability",
+      "desc": "Multiple versions of Fortinet FortiOS SSL-VPN contain a heap-based buffer overflow vulnerability which can allow an unauthenticated, remote attacker to execute arbitrary code or commands via specifically crafted requests.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2022-27518",
+      "vendor": "Citrix",
+      "product": "Application Delivery Controller (ADC) and Gateway",
+      "class": "AuthBypass",
+      "name": "Citrix Application Delivery Controller (ADC) and Gateway Authentication Bypass Vulnerability",
+      "desc": "Citrix Application Delivery Controller (ADC) and Gateway, when configured with SAML SP or IdP configuration, contain an authentication bypass vulnerability that allows an attacker to execute code as administrator.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2022-40684",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "class": "AuthBypass",
+      "name": "Fortinet Multiple Products Authentication Bypass Vulnerability",
+      "desc": "Fortinet FortiOS, FortiProxy, and FortiSwitchManager contain an authentication bypass vulnerability that could allow an unauthenticated attacker to perform operations on the administrative interface via specially crafted HTTP or HTTPS requests.",
+      "proto_reason": "desc:https request"
+    },
+    {
+      "cve": "CVE-2022-27593",
+      "vendor": "QNAP",
+      "product": "Photo Station",
+      "class": "PT",
+      "name": "QNAP Photo Station Externally Controlled Reference Vulnerability",
+      "desc": "Certain QNAP NAS running Photo Station with internet exposure contain an externally controlled reference to a resource vulnerability which can allow an attacker to modify system files. This vulnerability was observed being utilized in a Deadbolt ransomware campaign.",
+      "proto_reason": "product:photo station"
+    },
+    {
+      "cve": "CVE-2022-26258",
+      "vendor": "D-Link",
+      "product": "DIR-820L",
+      "class": "CMDi",
+      "name": "D-Link DIR-820L Remote Code Execution Vulnerability",
+      "desc": "D-Link DIR-820L contains an unspecified vulnerability in Device Name parameter in /lan.asp which allows for remote code execution.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2018-13374",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiADC",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS and FortiADC Improper Access Control Vulnerability",
+      "desc": "Fortinet FortiOS and FortiADC contain an improper access control vulnerability that allows attackers to obtain the LDAP server login credentials configured in FortiGate by pointing a LDAP server connectivity test request to a rogue LDAP server.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2017-5521",
+      "vendor": "NETGEAR",
+      "product": "Multiple Devices",
+      "class": "InfoLeak",
+      "name": "NETGEAR Multiple Devices Exposure of Sensitive Information Vulnerability",
+      "desc": "Multiple NETGEAR devices are prone to admin password disclosure via simple crafted requests to the web management server.",
+      "proto_reason": "desc:web management"
+    },
+    {
+      "cve": "CVE-2011-4723",
+      "vendor": "D-Link",
+      "product": "DIR-300 Router",
+      "class": "InfoLeak",
+      "name": "D-Link DIR-300 Router Cleartext Storage of a Password Vulnerability",
+      "desc": "The D-Link DIR-300 router stores cleartext passwords, which allows context-dependent attackers to obtain sensitive information.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2022-0028",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "Other",
+      "name": "Palo Alto Networks PAN-OS Reflected Amplification Denial-of-Service Vulnerability",
+      "desc": "A Palo Alto Networks PAN-OS URL filtering policy misconfiguration could allow a network-based attacker to conduct reflected and amplified TCP denial-of-service (RDoS) attacks.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2017-15944",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "CMDi",
+      "name": "Palo Alto Networks PAN-OS Remote Code Execution Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains multiple, unspecified vulnerabilities which can allow for remote code execution when chained.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2019-7193",
+      "vendor": "QNAP",
+      "product": "QTS",
+      "class": "Other",
+      "name": "QNAP QTS Improper Input Validation Vulnerability",
+      "desc": "QNAP QTS contains an improper input validation vulnerability allowing remote attackers to inject code on the system.",
+      "proto_reason": "product:qts"
+    },
+    {
+      "cve": "CVE-2019-15271",
+      "vendor": "Cisco",
+      "product": "RV Series Routers",
+      "class": "Other",
+      "name": "Cisco RV Series Routers Deserialization of Untrusted Data Vulnerability",
+      "desc": "A deserialization of untrusted data vulnerability in the web-based management interface of certain Cisco Small Business RV Series Routers could allow an attacker to execute code with root privileges.",
+      "proto_reason": "product:rv series"
+    },
+    {
+      "cve": "CVE-2018-19953",
+      "vendor": "QNAP",
+      "product": "Network Attached Storage (NAS)",
+      "class": "Other",
+      "name": "QNAP NAS File Station Cross-Site Scripting Vulnerability",
+      "desc": "A cross-site scripting vulnerability affecting QNAP NAS File Station could allow remote attackers to inject malicious code.",
+      "proto_reason": "product:network attached storage"
+    },
+    {
+      "cve": "CVE-2018-19949",
+      "vendor": "QNAP",
+      "product": "Network Attached Storage (NAS)",
+      "class": "CMDi",
+      "name": "QNAP NAS File Station Command Injection Vulnerability",
+      "desc": "A command injection vulnerability affecting QNAP NAS File Station could allow remote attackers to run commands.",
+      "proto_reason": "product:network attached storage"
+    },
+    {
+      "cve": "CVE-2018-19943",
+      "vendor": "QNAP",
+      "product": "Network Attached Storage (NAS)",
+      "class": "Other",
+      "name": "QNAP NAS File Station Cross-Site Scripting Vulnerability",
+      "desc": "A cross-site scripting vulnerability affecting QNAP NAS File Station could allow remote attackers to inject malicious code.",
+      "proto_reason": "product:network attached storage"
+    },
+    {
+      "cve": "CVE-2022-30525",
+      "vendor": "Zyxel",
+      "product": "Multiple Firewalls",
+      "class": "CMDi",
+      "name": "Zyxel Multiple Firewalls OS Command Injection Vulnerability",
+      "desc": "A command injection vulnerability in the CGI program of some Zyxel firewall versions could allow an attacker to modify specific files and then execute some OS commands on a vulnerable device.",
+      "proto_reason": "desc:cgi program"
+    },
+    {
+      "cve": "CVE-2019-3929",
+      "vendor": "Crestron",
+      "product": "Multiple Products",
+      "class": "CMDi",
+      "name": "Crestron Multiple Products Command Injection Vulnerability",
+      "desc": "Multiple Crestron products are vulnerable to command injection via the file_transfer.cgi HTTP endpoint. A remote, unauthenticated attacker can use this vulnerability to execute operating system commands as root.",
+      "proto_reason": "desc:.cgi"
+    },
+    {
+      "cve": "CVE-2019-16057",
+      "vendor": "D-Link",
+      "product": "DNS-320 Storage Device",
+      "class": "CMDi",
+      "name": "D-Link DNS-320 Remote Code Execution Vulnerability",
+      "desc": "The login_mgr.cgi script in D-Link DNS-320 is vulnerable to remote code execution.",
+      "proto_reason": "product:dns-"
+    },
+    {
+      "cve": "CVE-2018-7841",
+      "vendor": "Schneider Electric",
+      "product": "U.motion Builder",
+      "class": "CMDi",
+      "name": "Schneider Electric U.motion Builder SQL Injection Vulnerability",
+      "desc": "A SQL Injection vulnerability exists in U.motion Builder software which could cause unwanted code execution when an improper set of characters is entered.",
+      "proto_reason": "product:u.motion"
+    },
+    {
+      "cve": "CVE-2010-5330",
+      "vendor": "Ubiquiti",
+      "product": "AirOS",
+      "class": "CMDi",
+      "name": "Ubiquiti AirOS Command Injection Vulnerability",
+      "desc": "Certain Ubiquiti devices contain a command injection vulnerability via a GET request to stainfo.cgi.",
+      "proto_reason": "product:airos"
+    },
+    {
+      "cve": "CVE-2022-23176",
+      "vendor": "WatchGuard",
+      "product": "Firebox and XTM",
+      "class": "AuthBypass",
+      "name": "WatchGuard Firebox and XTM Privilege Escalation Vulnerability",
+      "desc": "WatchGuard Firebox and XTM appliances allow a remote attacker with unprivileged credentials to access the system with a privileged management session via exposed management access.",
+      "proto_reason": "product:firebox"
+    },
+    {
+      "cve": "CVE-2020-2509",
+      "vendor": "QNAP",
+      "product": "QNAP Network-Attached Storage (NAS)",
+      "class": "CMDi",
+      "name": "QNAP Network-Attached Storage (NAS) Command Injection Vulnerability",
+      "desc": "QNAP NAS devices contain a command injection vulnerability which could allow attackers to perform remote code execution.",
+      "proto_reason": "product:nas"
+    },
+    {
+      "cve": "CVE-2021-28799",
+      "vendor": "QNAP",
+      "product": "Network Attached Storage (NAS)",
+      "class": "AuthBypass",
+      "name": "QNAP NAS Improper Authorization Vulnerability",
+      "desc": "QNAP NAS running HBS 3 contains an improper authorization vulnerability which can allow remote attackers to log in to a device.",
+      "proto_reason": "product:network attached storage"
+    },
+    {
+      "cve": "CVE-2019-7483",
+      "vendor": "SonicWall",
+      "product": "SMA100",
+      "class": "PT",
+      "name": "SonicWall SMA100 Directory Traversal Vulnerability",
+      "desc": "In SonicWall SMA100, an unauthenticated Directory Traversal vulnerability in the handleWAFRedirect CGI allows the user to test for the presence of a file on the server.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2022-26318",
+      "vendor": "WatchGuard",
+      "product": "Firebox and XTM Appliances",
+      "class": "CMDi",
+      "name": "WatchGuard Firebox and XTM Appliances Arbitrary Code Execution",
+      "desc": "On WatchGuard Firebox and XTM appliances, an unauthenticated user can execute arbitrary code.",
+      "proto_reason": "product:firebox"
+    },
+    {
+      "cve": "CVE-2020-9377",
+      "vendor": "D-Link",
+      "product": "DIR-610 Devices",
+      "class": "CMDi",
+      "name": "D-Link DIR-610 Devices Remote Command Execution",
+      "desc": "D-Link DIR-610 devices allow remote code execution via the cmd parameter to command.php.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2020-9054",
+      "vendor": "Zyxel",
+      "product": "Multiple Network-Attached Storage (NAS) Devices",
+      "class": "CMDi",
+      "name": "Zyxel Multiple NAS Devices OS Command Injection Vulnerability",
+      "desc": "Multiple Zyxel network-attached storage (NAS) devices contain a pre-authentication command injection vulnerability, which may allow a remote, unauthenticated attacker to execute arbitrary code.",
+      "proto_reason": "product:nas"
+    },
+    {
+      "cve": "CVE-2020-25223",
+      "vendor": "Sophos",
+      "product": "SG UTM",
+      "class": "CMDi",
+      "name": "Sophos SG UTM Remote Code Execution Vulnerability",
+      "desc": "A remote code execution vulnerability exists in the WebAdmin of Sophos SG UTM.",
+      "proto_reason": "product:sg utm"
+    },
+    {
+      "cve": "CVE-2020-2506",
+      "vendor": "QNAP Systems",
+      "product": "Helpdesk",
+      "class": "AuthBypass",
+      "name": "QNAP Helpdesk Improper Access Control Vulnerability",
+      "desc": "QNAP Helpdesk contains an improper access control vulnerability which could allow an attacker to gain privileges or to read sensitive information.",
+      "proto_reason": "product:helpdesk"
+    },
+    {
+      "cve": "CVE-2020-2021",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "AuthBypass",
+      "name": "Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+      "desc": "Palo Alto Networks PAN-OS contains a vulnerability in SAML which allows an attacker to bypass authentication.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2020-1631",
+      "vendor": "Juniper",
+      "product": "Junos OS",
+      "class": "CMDi",
+      "name": "Juniper Junos OS Path Traversal Vulnerability",
+      "desc": "A path traversal vulnerability in the HTTP/HTTPS service used by J-Web, Web Authentication, Dynamic-VPN (DVPN), Firewall Authentication Pass-Through with Web-Redirect, and Zero Touch Provisioning (ZTP) allows an unauthenticated attacker to perform remote code execution.",
+      "proto_reason": "product:junos"
+    },
+    {
+      "cve": "CVE-2019-12991",
+      "vendor": "Citrix",
+      "product": "SD-WAN and NetScaler",
+      "class": "CMDi",
+      "name": "Citrix SD-WAN and NetScaler Command Injection Vulnerability",
+      "desc": "Authenticated Command Injection in Citrix SD-WAN Appliance and NetScaler SD-WAN Appliance.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2019-12989",
+      "vendor": "Citrix",
+      "product": "SD-WAN and NetScaler",
+      "class": "Other",
+      "name": "Citrix SD-WAN and NetScaler SQL Injection Vulnerability",
+      "desc": "Citrix SD-WAN and NetScaler SD-WAN allow SQL Injection.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2018-11138",
+      "vendor": "Quest",
+      "product": "KACE System Management Appliance",
+      "class": "CMDi",
+      "name": "Quest KACE System Management Appliance Remote Command Execution Vulnerability",
+      "desc": "The '/common/download_agent_installer.php' script in the Quest KACE System Management Appliance is accessible by anonymous users and can be abused to perform remote code execution.",
+      "proto_reason": "desc:.php"
+    },
+    {
+      "cve": "CVE-2018-0125",
+      "vendor": "Cisco",
+      "product": "VPN Routers",
+      "class": "CMDi",
+      "name": "Cisco VPN Routers Remote Code Execution Vulnerability",
+      "desc": "A vulnerability in the web interface of the Cisco VPN Routers could allow an unauthenticated, remote attacker to execute arbitrary code as root and gain full control of an affected system.",
+      "proto_reason": "product:vpn routers"
+    },
+    {
+      "cve": "CVE-2017-6334",
+      "vendor": "NETGEAR",
+      "product": "DGN2200 Devices",
+      "class": "CMDi",
+      "name": "NETGEAR DGN2200 Devices OS Command Injection Vulnerability",
+      "desc": "dnslookup.cgi on NETGEAR DGN2200 devices with firmware through 10.0.0.50 allows remote authenticated users to execute arbitrary OS commands",
+      "proto_reason": "product:dgn2200"
+    },
+    {
+      "cve": "CVE-2017-6316",
+      "vendor": "Citrix",
+      "product": "NetScaler SD-WAN Enterprise, CloudBridge Virtual WAN, and XenMobile Server",
+      "class": "CMDi",
+      "name": "Citrix Multiple Products Remote Code Execution Vulnerability",
+      "desc": "A vulnerability has been identified in the management interface of Citrix NetScaler SD-WAN Enterprise and Standard Edition and Citrix CloudBridge Virtual WAN Edition that could result in an unauthenticated, remote attacker being able to execute arbitrary code as a root user. This vulnerability also affects XenMobile Server.",
+      "proto_reason": "product:netscaler"
+    },
+    {
+      "cve": "CVE-2016-11021",
+      "vendor": "D-Link",
+      "product": "DCS-930L Devices",
+      "class": "CMDi",
+      "name": "D-Link DCS-930L Devices OS Command Injection Vulnerability",
+      "desc": "setSystemCommand on D-Link DCS-930L devices allows a remote attacker to execute code via an OS command.",
+      "proto_reason": "product:dcs-"
+    },
+    {
+      "cve": "CVE-2016-10174",
+      "vendor": "NETGEAR",
+      "product": "WNR2000v5 Router",
+      "class": "CMDi",
+      "name": "NETGEAR WNR2000v5 Router Buffer Overflow Vulnerability",
+      "desc": "The NETGEAR WNR2000v5 router contains a buffer overflow which can be exploited to achieve remote code execution.",
+      "proto_reason": "product:wnr2000"
+    },
+    {
+      "cve": "CVE-2015-3035",
+      "vendor": "TP-Link",
+      "product": "Multiple Archer Devices",
+      "class": "PT",
+      "name": "TP-Link Multiple Archer Devices Directory Traversal Vulnerability",
+      "desc": "Directory traversal vulnerability in multiple TP-Link Archer devices allows remote attackers to read arbitrary files via a .. (dot dot) in the PATH_INFO to login/.",
+      "proto_reason": "product:archer"
+    },
+    {
+      "cve": "CVE-2015-0666",
+      "vendor": "Cisco",
+      "product": "Prime Data Center Network Manager (DCNM)",
+      "class": "PT",
+      "name": "Cisco Prime Data Center Network Manager (DCNM) Directory Traversal Vulnerability",
+      "desc": "Directory traversal vulnerability in the fmserver servlet in Cisco Prime Data Center Network Manager (DCNM) allows remote attackers to read arbitrary files.",
+      "proto_reason": "product:prime data center"
+    },
+    {
+      "cve": "CVE-2013-5223",
+      "vendor": "D-Link",
+      "product": "DSL-2760U",
+      "class": "Other",
+      "name": "D-Link DSL-2760U Gateway Cross-Site Scripting Vulnerability",
+      "desc": "A cross-site scripting (XSS) vulnerability exists in the D-Link DSL-2760U gateway, allowing remote authenticated users to inject arbitrary web script or HTML.",
+      "proto_reason": "product:dsl-"
+    },
+    {
+      "cve": "CVE-2020-5135",
+      "vendor": "SonicWall",
+      "product": "SonicOS",
+      "class": "CMDi",
+      "name": "SonicWall SonicOS Buffer Overflow Vulnerability",
+      "desc": "A buffer overflow vulnerability in SonicOS allows a remote attacker to cause Denial of Service (DoS) and potentially execute arbitrary code by sending a malicious request to the firewall.",
+      "proto_reason": "product:sonico"
+    },
+    {
+      "cve": "CVE-2020-8218",
+      "vendor": "Pulse Secure",
+      "product": "Pulse Connect Secure",
+      "class": "CMDi",
+      "name": "Pulse Connect Secure Code Injection Vulnerability",
+      "desc": "A code injection vulnerability exists in Pulse Connect Secure that allows an attacker to crafted a URI to perform an arbitrary code execution via the admin web interface.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2017-6077",
+      "vendor": "NETGEAR",
+      "product": "Wireless Router DGN2200",
+      "class": "CMDi",
+      "name": "NETGEAR DGN2200 Remote Code Execution Vulnerability",
+      "desc": "NETGEAR DGN2200 wireless routers contain a vulnerability that allows for remote code execution.",
+      "proto_reason": "product:dgn2200"
+    },
+    {
+      "cve": "CVE-2022-20708",
+      "vendor": "Cisco",
+      "product": "Small Business RV160, RV260, RV340, and RV345 Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Stack-based Buffer Overflow Vulnerability",
+      "desc": "A vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers could allow an attacker to do any of the following: Execute arbitrary code elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, or cause a denial of service (DoS).",
+      "proto_reason": "product:rv1"
+    },
+    {
+      "cve": "CVE-2022-20703",
+      "vendor": "Cisco",
+      "product": "Small Business RV160, RV260, RV340, and RV345 Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Stack-based Buffer Overflow Vulnerability",
+      "desc": "A vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers could allow an attacker to do any of the following: Execute arbitrary code elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, or cause a denial of service (DoS).",
+      "proto_reason": "product:rv1"
+    },
+    {
+      "cve": "CVE-2022-20701",
+      "vendor": "Cisco",
+      "product": "Small Business RV160, RV260, RV340, and RV345 Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Stack-based Buffer Overflow Vulnerability",
+      "desc": "A vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers could allow an attacker to do any of the following: Execute arbitrary code elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, or cause a denial of service (DoS).",
+      "proto_reason": "product:rv1"
+    },
+    {
+      "cve": "CVE-2022-20700",
+      "vendor": "Cisco",
+      "product": "Small Business RV160, RV260, RV340, and RV345 Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Stack-based Buffer Overflow Vulnerability",
+      "desc": "A vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers could allow an attacker to do any of the following: Execute arbitrary code elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, or cause a denial of service (DoS).",
+      "proto_reason": "product:rv1"
+    },
+    {
+      "cve": "CVE-2022-20699",
+      "vendor": "Cisco",
+      "product": "Small Business RV160, RV260, RV340, and RV345 Series Routers",
+      "class": "CMDi",
+      "name": "Cisco Small Business RV Series Routers Stack-based Buffer Overflow Vulnerability",
+      "desc": "A vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers could allow an attacker to do any of the following: Execute arbitrary code elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, or cause a denial of service (DoS).",
+      "proto_reason": "product:rv1"
+    },
+    {
+      "cve": "CVE-2019-1652",
+      "vendor": "Cisco",
+      "product": "Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers",
+      "class": "Other",
+      "name": "Cisco Small Business Routers Improper Input Validation Vulnerability",
+      "desc": "A vulnerability in the web-based management interface of Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers could allow an authenticated, remote attacker with administrative privileges on an affected device to execute arbitrary commands.",
+      "proto_reason": "product:rv3"
+    },
+    {
+      "cve": "CVE-2016-8562",
+      "vendor": "Siemens",
+      "product": "SIMATIC CP",
+      "class": "Other",
+      "name": "Siemens SIMATIC CP 1543-1 Improper Privilege Management Vulnerability",
+      "desc": "An improper privilege management vulnerability exists within the Siemens SIMATIC Communication Processor (CP) that allows a privileged attacker to remotely cause a denial of service.",
+      "proto_reason": "product:simatic cp"
+    },
+    {
+      "cve": "CVE-2015-2051",
+      "vendor": "D-Link",
+      "product": "DIR-645 Router",
+      "class": "CMDi",
+      "name": "D-Link DIR-645 Router Remote Code Execution Vulnerability",
+      "desc": "D-Link DIR-645 Wired/Wireless Router allows remote attackers to execute arbitrary commands via a GetDeviceSettings action to the HNAP interface.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2020-5722",
+      "vendor": "Grandstream",
+      "product": "UCM6200",
+      "class": "CMDi",
+      "name": "Grandstream Networks UCM6200 Series SQL Injection Vulnerability",
+      "desc": "Grandstream UCM6200 series is vulnerable to an unauthenticated remote SQL injection via crafted HTTP request. Exploitation can allow for code execution as root.",
+      "proto_reason": "product:ucm6200"
+    },
+    {
+      "cve": "CVE-2018-13382",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiProxy",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS and FortiProxy Improper Authorization",
+      "desc": "An Improper Authorization vulnerability in Fortinet FortiOS and FortiProxy under SSL VPN web portal allows an unauthenticated attacker to modify the password.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2018-13383",
+      "vendor": "Fortinet",
+      "product": "FortiOS and FortiProxy",
+      "class": "Other",
+      "name": "Fortinet FortiOS and FortiProxy Out-of-bounds Write",
+      "desc": "A heap buffer overflow in Fortinet FortiOS and FortiProxy may cause the SSL VPN web service termination for logged in users.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2019-1579",
+      "vendor": "Palo Alto Networks",
+      "product": "PAN-OS",
+      "class": "CMDi",
+      "name": "Palo Alto Networks PAN-OS Remote Code Execution Vulnerability",
+      "desc": "Remote Code Execution in PAN-OS with GlobalProtect Portal or GlobalProtect Gateway Interface enabled.",
+      "proto_reason": "product:pan-os"
+    },
+    {
+      "cve": "CVE-2021-44168",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "PT",
+      "name": "Fortinet FortiOS Arbitrary File Download",
+      "desc": "Fortinet FortiOS \"execute restore src-vis\" downloads code without integrity checking, allowing an attacker to arbitrarily download files.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2018-14847",
+      "vendor": "MikroTik",
+      "product": "RouterOS",
+      "class": "PT",
+      "name": "MikroTik Router OS Directory Traversal Vulnerability",
+      "desc": "MikroTik RouterOS through 6.42 allows unauthenticated remote attackers to read arbitrary files and remote authenticated attackers to write arbitrary files due to a directory traversal vulnerability in the WinBox interface.",
+      "proto_reason": "product:routeros"
+    },
+    {
+      "cve": "CVE-2020-3452",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "PT",
+      "name": "Cisco ASA and FTD Read-Only Path Traversal Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain an improper input validation vulnerability when HTTP requests process URLs.  An attacker could exploit this vulnerability by sending a crafted HTTP request containing directory traversal character sequences to an affected device. A successful exploit could allow the attacker to view arbitrary files within the web services file system on the targeted device.",
+      "proto_reason": "desc:http request"
+    },
+    {
+      "cve": "CVE-2020-3161",
+      "vendor": "Cisco",
+      "product": "Cisco IP Phones",
+      "class": "CMDi",
+      "name": "Cisco IP Phones Web Server Remote Code Execution and Denial-of-Service Vulnerability",
+      "desc": "Cisco IP Phones contain an improper input validation vulnerability for HTTP requests. Exploitation could allow an attacker to execute code remotely with root privileges or cause a denial-of-service (DoS) condition.",
+      "proto_reason": "product:ip phones"
+    },
+    {
+      "cve": "CVE-2019-1653",
+      "vendor": "Cisco",
+      "product": "Small Business RV320 and RV325 Routers",
+      "class": "AuthBypass",
+      "name": "Cisco Small Business RV320 and RV325 Routers Information Disclosure Vulnerability",
+      "desc": "Cisco Small Business RV320 and RV325 Dual Gigabit WAN VPN Routers contain improper access controls for URLs. Exploitation could allow an attacker to download the router configuration or detailed diagnostic information.",
+      "proto_reason": "product:rv3"
+    },
+    {
+      "cve": "CVE-2020-8193",
+      "vendor": "Citrix",
+      "product": "Application Delivery Controller (ADC), Gateway, and SD-WAN WANOP Appliance",
+      "class": "Other",
+      "name": "Citrix ADC, Gateway, and SD-WAN WANOP Appliance Authorization Bypass Vulnerability",
+      "desc": "Citrix ADC, Citrix Gateway, and multiple Citrix SD-WAN WANOP appliance models contain an authorization bypass vulnerability that may allow unauthenticated access to certain URL endpoints. The attacker must have access to the NetScaler IP (NSIP) in order to perform exploitation.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2020-8195",
+      "vendor": "Citrix",
+      "product": "Application Delivery Controller (ADC), Gateway, and SD-WAN WANOP Appliance",
+      "class": "InfoLeak",
+      "name": "Citrix ADC, Gateway, and SD-WAN WANOP Appliance Information Disclosure Vulnerability",
+      "desc": "Citrix ADC, Citrix Gateway, and multiple Citrix SD-WAN WANOP appliance models contain an information disclosure vulnerability.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2020-8196",
+      "vendor": "Citrix",
+      "product": "Application Delivery Controller (ADC), Gateway, and SD-WAN WANOP Appliance",
+      "class": "InfoLeak",
+      "name": "Citrix ADC, Gateway, and SD-WAN WANOP Appliance Information Disclosure Vulnerability",
+      "desc": "Citrix ADC, Citrix Gateway, and multiple Citrix SD-WAN WANOP appliance models contain an information disclosure vulnerability.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2019-19781",
+      "vendor": "Citrix",
+      "product": "Application Delivery Controller (ADC), Gateway, and SD-WAN WANOP Appliance",
+      "class": "CMDi",
+      "name": "Citrix ADC, Gateway, and SD-WAN WANOP Appliance Code Execution Vulnerability",
+      "desc": "Citrix ADC, Citrix Gateway, and multiple Citrix SD-WAN WANOP appliance models contain an unspecified vulnerability that could allow an unauthenticated attacker to perform code execution.",
+      "proto_reason": "product:adc"
+    },
+    {
+      "cve": "CVE-2020-29557",
+      "vendor": "D-Link",
+      "product": "DIR-825 R1 Devices",
+      "class": "CMDi",
+      "name": "D-Link DIR-825 R1 Devices Buffer Overflow Vulnerability",
+      "desc": "D-Link DIR-825 R1 devices contain a buffer overflow vulnerability in the web interface that may allow for remote code execution.",
+      "proto_reason": "product:dir-"
+    },
+    {
+      "cve": "CVE-2020-25506",
+      "vendor": "D-Link",
+      "product": "DNS-320 Device",
+      "class": "CMDi",
+      "name": "D-Link DNS-320 Device Command Injection Vulnerability",
+      "desc": "D-Link DNS-320 device contains a command injection vulnerability in the sytem_mgr.cgi component that may allow for remote code execution.",
+      "proto_reason": "product:dns-"
+    },
+    {
+      "cve": "CVE-2020-8515",
+      "vendor": "DrayTek",
+      "product": "Multiple Vigor Routers",
+      "class": "CMDi",
+      "name": "Multiple DrayTek Vigor Routers Web Management Page Vulnerability",
+      "desc": "DrayTek Vigor3900, Vigor2960, and Vigor300B routers contain an unspecified vulnerability that allows for remote code execution.",
+      "proto_reason": "product:vigor"
+    },
+    {
+      "cve": "CVE-2019-5591",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "InfoLeak",
+      "name": "Fortinet FortiOS Default Configuration Vulnerability",
+      "desc": "Fortinet FortiOS contains a default configuration vulnerability that may allow an unauthenticated attacker on the same subnet to intercept sensitive information by impersonating the Lightweight Directory Access Protocol (LDAP) server.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2020-12812",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "AuthBypass",
+      "name": "Fortinet FortiOS SSL VPN Improper Authentication Vulnerability",
+      "desc": "Fortinet FortiOS SSL VPN contains an improper authentication vulnerability that may allow a user to login successfully without being prompted for the second factor of authentication (FortiToken) if they change the case in their username.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2018-13379",
+      "vendor": "Fortinet",
+      "product": "FortiOS",
+      "class": "PT",
+      "name": "Fortinet FortiOS SSL VPN Path Traversal Vulnerability",
+      "desc": "Fortinet FortiOS SSL VPN web portal contains a path traversal vulnerability that may allow an unauthenticated attacker to download FortiOS system files through specially crafted HTTP resource requests.",
+      "proto_reason": "product:fortios"
+    },
+    {
+      "cve": "CVE-2020-26919",
+      "vendor": "NETGEAR",
+      "product": "JGS516PE Devices",
+      "class": "AuthBypass",
+      "name": "Netgear JGS516PE Devices Missing Function Level Access Control Vulnerability",
+      "desc": "Netgear JGS516PE devices contain a missing function level access control vulnerability.",
+      "proto_reason": "product:jgs516"
+    },
+    {
+      "cve": "CVE-2019-19356",
+      "vendor": "Netis",
+      "product": "WF2419 Devices",
+      "class": "CMDi",
+      "name": "Netis WF2419 Devices Remote Code Execution Vulnerability",
+      "desc": "Netis WF2419 devices contains an unspecified vulnerability that allows an attacker to perform remote code execution as root through the router's web management page.",
+      "proto_reason": "desc:web management"
+    },
+    {
+      "cve": "CVE-2021-22893",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "Other",
+      "name": "Ivanti Pulse Connect Secure Use-After-Free Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure contains a use-after-free vulnerability that allow a remote, unauthenticated attacker to execute code via license services.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2020-8243",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "CMDi",
+      "name": "Ivanti Pulse Connect Secure Code Execution Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure contains an unspecified vulnerability in the admin web interface that could allow an authenticated attacker to upload a custom template to perform code execution.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2021-22900",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "Other",
+      "name": "Ivanti Pulse Connect Secure Unrestricted File Upload Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure contains an unrestricted file upload vulnerability that allows an authenticated administrator to perform a file write via a maliciously crafted archive upload in the administrator web interface.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2021-22894",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "Other",
+      "name": "Ivanti Pulse Connect Secure Collaboration Suite Buffer Overflow Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure Collaboration Suite contains a buffer overflow vulnerabilities that allows a remote authenticated users to execute code as the root user via maliciously crafted meeting room.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2020-8260",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "CMDi",
+      "name": "Ivanti Pulse Connect Secure Code Execution Vulnerability",
+      "desc": "Pulse Connect Secure contains an unspecified vulnerability that allows an authenticated attacker to perform code execution using uncontrolled gzip extraction.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2021-22899",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "CMDi",
+      "name": "Ivanti Pulse Connect Secure Command Injection Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure contains a command injection vulnerability that allows remote authenticated users to perform remote code execution via Windows File Resource Profiles.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2019-11510",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure",
+      "class": "PT",
+      "name": "Ivanti Pulse Connect Secure Arbitrary File Read Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure contains an arbitrary file read vulnerability that allows an unauthenticated remote attacker with network access via HTTPS to send a specially crafted URI.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2019-11539",
+      "vendor": "Ivanti",
+      "product": "Pulse Connect Secure and Pulse Policy Secure",
+      "class": "CMDi",
+      "name": "Ivanti Pulse Connect Secure and Policy Secure Command Injection Vulnerability",
+      "desc": "Ivanti Pulse Connect Secure and Policy Secure allows an authenticated attacker from the admin web interface to inject and execute commands.",
+      "proto_reason": "product:connect secure"
+    },
+    {
+      "cve": "CVE-2021-35395",
+      "vendor": "Realtek",
+      "product": "AP-Router SDK",
+      "class": "Other",
+      "name": "Realtek AP-Router SDK Buffer Overflow Vulnerability",
+      "desc": "Realtek AP-Router SDK HTTP web server boa contains a buffer overflow vulnerability due to unsafe copies of some overly long parameters submitted in the form that lead to denial-of-service (DoS).",
+      "proto_reason": "desc:web server"
+    },
+    {
+      "cve": "CVE-2019-7481",
+      "vendor": "SonicWall",
+      "product": "SMA100",
+      "class": "Other",
+      "name": "SonicWall SMA100 SQL Injection Vulnerability",
+      "desc": "SonicWall SMA100 contains a SQL injection vulnerability allowing an unauthenticated user to gain read-only access to unauthorized resources.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2021-20016",
+      "vendor": "SonicWall",
+      "product": "SSLVPN SMA100",
+      "class": "Other",
+      "name": "SonicWall SSLVPN SMA100 SQL Injection Vulnerability",
+      "desc": "SonicWall SSLVPN SMA100 contains a SQL injection vulnerability that allows remote exploitation for credential access by an unauthenticated attacker.",
+      "proto_reason": "product:sma100"
+    },
+    {
+      "cve": "CVE-2020-12271",
+      "vendor": "Sophos",
+      "product": "SFOS",
+      "class": "CMDi",
+      "name": "Sophos SFOS SQL Injection Vulnerability",
+      "desc": "Sophos Firewall operating system (SFOS) firmware contains a SQL injection vulnerability when configured with either the administration (HTTPS) service or the User Portal is exposed on the WAN zone. Successful exploitation may cause remote code execution to exfiltrate usernames and hashed passwords for the local device admin(s), portal admins, and user accounts used for remote access (but not external Active Directory or LDAP passwords).",
+      "proto_reason": "product:sfos"
+    },
+    {
+      "cve": "CVE-2021-31755",
+      "vendor": "Tenda",
+      "product": "AC11 Router",
+      "class": "Other",
+      "name": "Tenda AC11 Router Stack Buffer Overflow Vulnerability",
+      "desc": "Tenda AC11 devices contain a stack buffer overflow vulnerability in /goform/setmac which allows attackers to execute code via a crafted post request.",
+      "proto_reason": "product:ac11"
+    },
+    {
+      "cve": "CVE-2020-10987",
+      "vendor": "Tenda",
+      "product": "AC1900 Router AC15 Model",
+      "class": "CMDi",
+      "name": "Tenda AC1900 Router AC15 Model Remote Code Execution Vulnerability",
+      "desc": "Tenda AC1900 Router AC15 Model contains an unspecified vulnerability that allows remote attackers to execute system commands via the deviceName POST parameter.",
+      "proto_reason": "product:ac1900"
+    },
+    {
+      "cve": "CVE-2018-14558",
+      "vendor": "Tenda",
+      "product": "AC7, AC9, and AC10 Routers",
+      "class": "CMDi",
+      "name": "Tenda AC7, AC9, and AC10 Routers Command Injection Vulnerability",
+      "desc": "Tenda AC7, AC9, and AC10 devices contain a command injection vulnerability due to  the \"formsetUsbUnload\" function executes a dosystemCmd function with untrusted input. Successful exploitation allows an attacker to execute OS commands via a crafted goform/setUsbUnload request.",
+      "proto_reason": "product:ac7"
+    },
+    {
+      "cve": "CVE-2024-7399",
+      "vendor": "Samsung",
+      "product": "MagicINFO 9 Server",
+      "class": "PT",
+      "name": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+      "desc": "Samsung MagicINFO 9 Server contains a path traversal vulnerability that could allow an attacker to write arbitrary files as system authority.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-32975",
+      "vendor": "Quest",
+      "product": "KACE Systems Management Appliance (SMA)",
+      "class": "AuthBypass",
+      "name": "Quest KACE Systems Management Appliance (SMA) Improper Authentication Vulnerability",
+      "desc": "Quest KACE Systems Management Appliance (SMA) contains an improper authentication vulnerability that could allow attackers to impersonate legitimate users without valid credentials.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-53521",
+      "vendor": "F5",
+      "product": "BIG-IP",
+      "class": "CMDi",
+      "name": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
+      "desc": "F5 BIG-IP APM contains a stack-based buffer overflow vulnerability that could allow a threat actor to achieve remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2017-7921",
+      "vendor": "Hikvision",
+      "product": "Multiple Products",
+      "class": "AuthBypass",
+      "name": "Hikvision Multiple Products Improper Authentication Vulnerability",
+      "desc": "Multiple Hikvision products contain an improper authentication vulnerability that could allow a malicious user to escalate privileges on the system and gain access to sensitive information.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2026-20127",
+      "vendor": "Cisco",
+      "product": "Catalyst SD-WAN Controller and Manager",
+      "class": "AuthBypass",
+      "name": "Cisco Catalyst SD-WAN Controller and Manager Authentication Bypass Vulnerability",
+      "desc": "Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, contain an authentication bypass vulnerability could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system. This vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to an affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-64328",
+      "vendor": "Sangoma",
+      "product": "FreePBX ",
+      "class": "CMDi",
+      "name": "Sangoma FreePBX OS Command Injection Vulnerability",
+      "desc": "Sangoma FreePBX Endpoint Manager contains an OS command injection vulnerability that could allow for a post-authentication command injection by an authenticated known user via the testconnection -> check_ssh_connect() function. An attacker can leverage this vulnerability to potentially obtain remote access to the system as an asterisk user. ",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2019-19006",
+      "vendor": "Sangoma",
+      "product": "FreePBX",
+      "class": "AuthBypass",
+      "name": " Sangoma FreePBX Improper Authentication Vulnerability",
+      "desc": "Sangoma FreePBX contains an improper authentication vulnerability that potentially allows unauthorized users to bypass password authentication and access services provided by the FreePBX admin.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "class": "AuthBypass",
+      "name": "Fortinet Multiple Products Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "desc": "Fortinet FortiAnalyzer, FortiManager, FortiOS, and FortiProxy contain an authentication bypass using an alternate path or channel that could allow an attacker with a FortiCloud account and a registered device to log into other devices registered to other accounts, if FortiCloud SSO authentication is enabled on those devices.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-20393",
+      "vendor": "Cisco",
+      "product": "Multiple Products",
+      "class": "Other",
+      "name": "Cisco Multiple Products Improper Input Validation Vulnerability",
+      "desc": "Cisco Secure Email Gateway, Secure Email, AsyncOS Software, and Web Manager appliances contains an improper input validation vulnerability that allows threat actors to execute arbitrary commands with root privileges on the underlying operating system of an affected appliance.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-59718",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "class": "Other",
+      "name": "Fortinet Multiple Products Improper Verification of Cryptographic Signature Vulnerability",
+      "desc": "Fortinet FortiOS, FortiSwitchMaster, FortiProxy, and FortiWeb contain an improper verification of cryptographic signature vulnerability that may allow an unauthenticated attacker to bypass the FortiCloud SSO login authentication via a crafted SAML message. Please be aware that CVE-2025-59719 pertains to the same problem and is mentioned in the same vendor advisory. Ensure to apply all patches mentioned in the advisory.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-37055",
+      "vendor": "D-Link",
+      "product": "Routers",
+      "class": "Other",
+      "name": "D-Link Routers Buffer Overflow Vulnerability",
+      "desc": "D-Link Routers contains a buffer overflow vulnerability that has a high impact on confidentiality, integrity, and availability. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-66644",
+      "vendor": "Array Networks ",
+      "product": "ArrayOS AG",
+      "class": "CMDi",
+      "name": "Array Networks ArrayOS AG OS Command Injection Vulnerability",
+      "desc": "Array Networks ArrayOS AG contains an OS command injection vulnerability that could allow an attacker to execute arbitrary commands.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-9377",
+      "vendor": "TP-Link",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "TP-Link Archer C7(EU) and TL-WR841N/ND(MS) OS Command Injection Vulnerability",
+      "desc": "TP-Link Archer C7(EU) and TL-WR841N/ND(MS) contain an OS command injection vulnerability that exists in the Parental Control page. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-57819",
+      "vendor": "Sangoma",
+      "product": "FreePBX",
+      "class": "CMDi",
+      "name": "Sangoma FreePBX Authentication Bypass Vulnerability",
+      "desc": "Sangoma FreePBX contains an authentication bypass vulnerability due to insufficiently sanitized user-supplied data allows unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-40799",
+      "vendor": "D-Link",
+      "product": "DNR-322L",
+      "class": "Other",
+      "name": "D-Link DNR-322L Download of Code Without Integrity Check Vulnerability",
+      "desc": "D-Link DNR-322L contains a download of code without integrity check vulnerability that could allow an authenticated attacker to execute OS level commands on the device. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-33538",
+      "vendor": "TP-Link",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "TP-Link Multiple Routers Command Injection Vulnerability",
+      "desc": "TP-Link TL-WR940N V2/V4, TL-WR841N V8/V10, and TL-WR740N V1/V2 contain a command injection vulnerability via the component /userRpm/WlanNetworkRpm. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-32030",
+      "vendor": "ASUS",
+      "product": "Routers",
+      "class": "AuthBypass",
+      "name": "ASUS Routers Improper Authentication Vulnerability",
+      "desc": "ASUS Lyra Mini and ASUS GT-AC2900 devices contain an improper authentication vulnerability that allows an attacker to gain unauthorized access to the administrative interface. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2025-4632",
+      "vendor": "Samsung",
+      "product": "MagicINFO 9 Server",
+      "class": "PT",
+      "name": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+      "desc": "Samsung MagicINFO 9 Server contains a path traversal vulnerability that allows an attacker to write arbitrary file as system authority.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2024-11120",
+      "vendor": "GeoVision",
+      "product": "Multiple Devices",
+      "class": "CMDi",
+      "name": "GeoVision Devices OS Command Injection Vulnerability",
+      "desc": "Multiple GeoVision devices contain an OS command injection vulnerability that allows a remote, unauthenticated attacker to inject and execute arbitrary system commands. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2024-6047",
+      "vendor": "GeoVision",
+      "product": "Multiple Devices",
+      "class": "CMDi",
+      "name": "GeoVision Devices OS Command Injection Vulnerability",
+      "desc": "Multiple GeoVision devices contain an OS command injection vulnerability that allows a remote, unauthenticated attacker to inject and execute arbitrary system commands. The impacted products could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-23227",
+      "vendor": "NUUO",
+      "product": "NVRmini2 Devices",
+      "class": "AuthBypass",
+      "name": "NUUO NVRmini2 Devices Missing Authentication Vulnerability ",
+      "desc": "NUUO NVRmini2 devices contain a missing authentication vulnerability that allows an unauthenticated attacker to upload an encrypted TAR archive, which can be abused to add arbitrary users. ",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2018-14933",
+      "vendor": "NUUO",
+      "product": "NVRmini Devices",
+      "class": "CMDi",
+      "name": "NUUO NVRmini Devices OS Command Injection Vulnerability ",
+      "desc": "NUUO NVRmini devices contain an OS command injection vulnerability. This vulnerability allows remote command execution via shell metacharacters in the uploaddir parameter for a writeuploaddir command.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2024-1212",
+      "vendor": "Progress",
+      "product": "Kemp LoadMaster",
+      "class": "CMDi",
+      "name": "Progress Kemp LoadMaster OS Command Injection Vulnerability",
+      "desc": "Progress Kemp LoadMaster contains an OS command injection vulnerability that allows an unauthenticated, remote attacker to access the system through the LoadMaster management interface, enabling arbitrary system command execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2024-39717",
+      "vendor": "Versa",
+      "product": "Director",
+      "class": "Other",
+      "name": "Versa Director Dangerous File Type Upload Vulnerability",
+      "desc": "The Versa Director GUI contains an unrestricted upload of file with dangerous type vulnerability that allows administrators with Provider-Data-Center-Admin or Provider-Data-Center-System-Admin privileges to customize the user interface. The “Change Favicon” (Favorite Icon) enables the upload of a .png file, which can be exploited to upload a malicious file with a .png extension disguised as an image.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2024-20353",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "Other",
+      "name": "Cisco ASA and FTD Denial of Service Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain an infinite loop vulnerability that can lead to remote denial of service condition.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2020-3259",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "InfoLeak",
+      "name": "Cisco ASA and FTD Information Disclosure Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain an information disclosure vulnerability. An attacker could retrieve memory contents on an affected device, which could lead to the disclosure of confidential information due to a buffer tracking issue when the software parses invalid URLs that are requested from the web services interface. This vulnerability affects only specific AnyConnect and WebVPN configurations.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-46748",
+      "vendor": "F5",
+      "product": "BIG-IP Configuration Utility",
+      "class": "Other",
+      "name": "F5 BIG-IP Configuration Utility SQL Injection Vulnerability",
+      "desc": "F5 BIG-IP Configuration utility contains an SQL injection vulnerability that may allow an authenticated attacker with network access through the BIG-IP management port and/or self IP addresses to execute system commands. This vulnerability can be used in conjunction with CVE-2023-46747.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-46747",
+      "vendor": "F5",
+      "product": "BIG-IP Configuration Utility",
+      "class": "AuthBypass",
+      "name": "F5 BIG-IP Configuration Utility Authentication Bypass Vulnerability",
+      "desc": "F5 BIG-IP Configuration utility contains an authentication bypass using an alternate path or channel vulnerability due to undisclosed requests that may allow an unauthenticated attacker with network access to the BIG-IP system through the management port and/or self IP addresses to execute system commands. This vulnerability can be used in conjunction with CVE-2023-46748.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2014-8361",
+      "vendor": "Realtek",
+      "product": "SDK",
+      "class": "Other",
+      "name": "Realtek SDK Improper Input Validation Vulnerability",
+      "desc": "Realtek SDK contains an improper input validation vulnerability in the miniigd SOAP service that allows remote attackers to execute malicious code via a crafted NewInternalClient request.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-33009",
+      "vendor": "Zyxel",
+      "product": "Multiple Firewalls",
+      "class": "CMDi",
+      "name": "Zyxel Multiple Firewalls Buffer Overflow Vulnerability",
+      "desc": "Zyxel ATP, USG FLEX, USG FLEX 50(W), USG20(W)-VPN, VPN, and ZyWALL/USG firewalls contain a buffer overflow vulnerability in the notification function that could allow an unauthenticated attacker to cause denial-of-service (DoS) conditions and remote code execution on an affected device.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-33010",
+      "vendor": "Zyxel",
+      "product": "Multiple Firewalls",
+      "class": "CMDi",
+      "name": "Zyxel Multiple Firewalls Buffer Overflow Vulnerability",
+      "desc": "Zyxel ATP, USG FLEX, USG FLEX 50(W), USG20(W)-VPN, VPN, and ZyWALL/USG firewalls contain a buffer overflow vulnerability in the ID processing function that could allow an unauthenticated attacker to cause denial-of-service (DoS) conditions and remote code execution on an affected device.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2023-25717",
+      "vendor": "Ruckus Wireless",
+      "product": "Multiple Products",
+      "class": "CMDi",
+      "name": "Multiple Ruckus Wireless Products CSRF and RCE Vulnerability",
+      "desc": "Ruckus Wireless Access Point (AP) software contains an unspecified vulnerability in the web services component. If the web services component is enabled on the AP, an attacker can perform cross-site request forgery (CSRF) or remote code execution (RCE). This vulnerability impacts Ruckus ZoneDirector, SmartZone, and Solo APs.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-41223",
+      "vendor": "Mitel",
+      "product": "MiVoice Connect",
+      "class": "CMDi",
+      "name": "Mitel MiVoice Connect Code Injection Vulnerability",
+      "desc": "The Director component in Mitel MiVoice Connect allows an authenticated attacker with internal network access to execute code within the context of the application.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-40765",
+      "vendor": "Mitel",
+      "product": "MiVoice Connect",
+      "class": "CMDi",
+      "name": "Mitel MiVoice Connect Command Injection Vulnerability",
+      "desc": "The Mitel Edge Gateway component of MiVoice Connect allows an authenticated attacker with internal network access to execute commands within the context of the system.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-3236",
+      "vendor": "Sophos",
+      "product": "Firewall",
+      "class": "CMDi",
+      "name": "Sophos Firewall Code Injection Vulnerability",
+      "desc": "A code injection vulnerability in the User Portal and Webadmin of Sophos Firewall allows for remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2018-6530",
+      "vendor": "D-Link",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "D-Link Multiple Routers OS Command Injection Vulnerability",
+      "desc": "Multiple D-Link routers contain an unspecified vulnerability that allows for execution of OS commands.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-29499",
+      "vendor": "Mitel",
+      "product": "MiVoice Connect",
+      "class": "CMDi",
+      "name": "Mitel MiVoice Connect Data Validation Vulnerability",
+      "desc": "The Service Appliance component in Mitel MiVoice Connect allows remote code execution due to incorrect data validation.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2017-6862",
+      "vendor": "NETGEAR",
+      "product": "Multiple Devices",
+      "class": "CMDi",
+      "name": "NETGEAR Multiple Devices Buffer Overflow Vulnerability",
+      "desc": "Multiple NETGEAR devices contain a buffer overflow vulnerability that allows for authentication bypass and remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-1388",
+      "vendor": "F5",
+      "product": "BIG-IP",
+      "class": "CMDi",
+      "name": "F5 BIG-IP Missing Authentication Vulnerability",
+      "desc": "F5 BIG-IP contains a missing authentication in critical function vulnerability which can allow for remote code execution, creation or deletion of files, or disabling services.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-45382",
+      "vendor": "D-Link",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "D-Link Multiple Routers Remote Code Execution Vulnerability",
+      "desc": "A remote code execution vulnerability exists in all series H/W revisions routers via the DDNS function in ncc2 binary file.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2022-1040",
+      "vendor": "Sophos",
+      "product": "Firewall",
+      "class": "CMDi",
+      "name": "Sophos Firewall Authentication Bypass Vulnerability",
+      "desc": "An authentication bypass vulnerability in User Portal and Webadmin of Sophos Firewall allows for remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2018-10562",
+      "vendor": "Dasan",
+      "product": "Gigabit Passive Optical Network (GPON) Routers",
+      "class": "CMDi",
+      "name": "Dasan GPON Routers Command Injection Vulnerability",
+      "desc": "Dasan GPON Routers contain an authentication bypass vulnerability. When combined with CVE-2018-10561, exploitation can allow an attacker to perform remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2018-10561",
+      "vendor": "Dasan",
+      "product": "Gigabit Passive Optical Network (GPON) Routers",
+      "class": "CMDi",
+      "name": "Dasan GPON Routers Authentication Bypass Vulnerability",
+      "desc": "Dasan GPON Routers contain an authentication bypass vulnerability. When combined with CVE-2018-10562, exploitation can allow an attacker to perform remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-20028",
+      "vendor": "SonicWall",
+      "product": "Secure Remote Access (SRA)",
+      "class": "Other",
+      "name": "SonicWall Secure Remote Access (SRA) SQL Injection Vulnerability",
+      "desc": "SonicWall Secure Remote Access (SRA) products contain an improper neutralization of a SQL Command leading to SQL injection.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2019-16920",
+      "vendor": "D-Link",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "D-Link Multiple Routers Command Injection Vulnerability",
+      "desc": "Multiple D-Link routers contain a command injection vulnerability which can allow attackers to achieve full system compromise.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2016-1555",
+      "vendor": "NETGEAR",
+      "product": "Wireless Access Point (WAP) Devices",
+      "class": "CMDi",
+      "name": "NETGEAR Multiple WAP Devices Command Injection Vulnerability",
+      "desc": "Multiple NETGEAR Wireless Access Point devices allows unauthenticated web pages to pass form input directly to the command-line interface. Exploitation allows for arbitrary code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2015-1187",
+      "vendor": "D-Link and TRENDnet",
+      "product": "Multiple Devices",
+      "class": "CMDi",
+      "name": "D-Link and TRENDnet Multiple Devices Remote Code Execution Vulnerability",
+      "desc": "The ping tool in multiple D-Link and TRENDnet devices allow remote attackers to perform remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2016-6277",
+      "vendor": "NETGEAR",
+      "product": "Multiple Routers",
+      "class": "CMDi",
+      "name": "NETGEAR Multiple Routers Remote Code Execution Vulnerability",
+      "desc": "NETGEAR confirmed multiple routers allow unauthenticated web pages to pass form input directly to the command-line interface, permitting remote code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-20038",
+      "vendor": "SonicWall",
+      "product": "SMA 100 Appliances",
+      "class": "CMDi",
+      "name": "SonicWall SMA 100 Appliances Stack-Based Buffer Overflow Vulnerability",
+      "desc": "SonicWall SMA 100 devies are vulnerable to an unauthenticated stack-based buffer overflow vulnerability where exploitation can result in code execution.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-22991",
+      "vendor": "F5",
+      "product": "BIG-IP Traffic Management Microkernel",
+      "class": "Other",
+      "name": "F5 BIG-IP Traffic Management Microkernel Buffer Overflow",
+      "desc": "The Traffic Management Microkernel of BIG-IP ASM Risk Engine has a buffer overflow vulnerability, leading to a bypassing of URL-based access controls.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-20090",
+      "vendor": "Arcadyan",
+      "product": "Buffalo Firmware",
+      "class": "PT",
+      "name": "Arcadyan Buffalo Firmware Path Traversal Vulnerability",
+      "desc": "Arcadyan Buffalo firmware contains a path traversal vulnerability that could allow unauthenticated, remote attackers to bypass authentication and access sensitive information. This vulnerability affects multiple routers across several different vendors.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2020-3580",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "Other",
+      "name": "Cisco ASA and FTD Cross-Site Scripting (XSS) Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain an insufficient input validation vulnerability for user-supplied input by the web services interface.  Successful exploitation could allow an attacker to perform cross-site scripting (XSS) in the context of the interface or access sensitive browser-based information.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2018-0296",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA)",
+      "class": "InfoLeak",
+      "name": "Cisco Adaptive Security Appliance (ASA) Denial-of-Service Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) contains an improper input validation vulnerability with HTTP URLs. Exploitation could allow an attacker to cause a denial-of-service (DoS) condition or information disclosure.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2020-5902",
+      "vendor": "F5",
+      "product": "BIG-IP",
+      "class": "CMDi",
+      "name": "F5 BIG-IP Traffic Management User Interface (TMUI) Remote Code Execution Vulnerability",
+      "desc": "F5 BIG-IP Traffic Management User Interface (TMUI) contains a remote code execution vulnerability in undisclosed pages.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2021-22986",
+      "vendor": "F5",
+      "product": "BIG-IP and BIG-IQ Centralized Management",
+      "class": "CMDi",
+      "name": "F5 BIG-IP and BIG-IQ Centralized Management iControl REST Remote Code Execution Vulnerability",
+      "desc": "F5 BIG-IP and BIG-IQ Centralized Management contain a remote code execution vulnerability in the iControl REST interface that allows unauthenticated attackers with network access to execute system commands, create or delete files, and disable services.",
+      "proto_reason": "manual:http_confirmed"
+    },
+    {
+      "cve": "CVE-2020-29583",
+      "vendor": "Zyxel",
+      "product": "Multiple Products",
+      "class": "AuthBypass",
+      "name": "Zyxel Multiple Products Use of Hard-Coded Credentials Vulnerability",
+      "desc": "Zyxel firewalls (ATP, USG, VM) and AP Controllers (NXC2500 and NXC5500) contain a use of hard-coded credentials vulnerability in an undocumented account (\"zyfwp\") with an unchangeable password.",
+      "proto_reason": "manual:http_confirmed"
+    }
+  ],
+  "non_http": [
+    {
+      "cve": "CVE-2025-20352",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Denial of Service and Remote Code Execution Vulnerability",
+      "desc": "Cisco IOS and IOS XE contains a stack-based buffer overflow vulnerability in the Simple Network Management Protocol (SNMP) subsystem that could allow for denial of service or remote code execution. A successful exploit could allow a low-privileged attacker to cause the affected system to reload, resulting in a DoS condition, or allow a high-privileged attacker to execute arbitrary code as the root user and obtain full control of the affected system.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6742",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code on an affected system or cause an affected system to reload.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2016-6366",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA)",
+      "class": "Other",
+      "name": "Cisco Adaptive Security Appliance (ASA) SNMP Buffer Overflow Vulnerability",
+      "desc": "A buffer overflow vulnerability in the Simple Network Management Protocol (SNMP) code of Cisco ASA software could allow an attacker to cause a reload of the affected system or to remotely execute code.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2010-3035",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability",
+      "desc": "Cisco IOS XR, when BGP is the configured routing feature, allows remote attackers to cause a denial-of-service (DoS).",
+      "proto_reason": "indicator:bgp "
+    },
+    {
+      "cve": "CVE-2009-2055",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Border Gateway Protocol (BGP) Denial-of-Service Vulnerability",
+      "desc": "Cisco IOS XR,when BGP is the configured routing feature, allows remote attackers to cause a denial-of-service (DoS).",
+      "proto_reason": "indicator:bgp "
+    },
+    {
+      "cve": "CVE-2018-0156",
+      "vendor": "Cisco",
+      "product": "IOS Software and Cisco IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS Software and Cisco IOS XE Software Smart Install Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial-of-service (DoS) condition.",
+      "proto_reason": "indicator:smart install"
+    },
+    {
+      "cve": "CVE-2017-6744",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "CMDi",
+      "name": "Cisco IOS Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS 1 contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code on an affected system or cause an affected system to reload. An attacker could exploit these vulnerabilities by sending a crafted SNMP packet to an affected system via IPv4 or IPv6.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6743",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6740",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code on an affected system or cause an affected system to reload.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6739",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code on an affected system or cause an affected system to reload.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6738",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6737",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6736",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+      "desc": "The Simple Network Management Protocol (SNMP) subsystem of Cisco IOS and IOS XE contains a vulnerability that could allow an authenticated, remote attacker to remotely execute code.",
+      "proto_reason": "indicator:snmp "
+    },
+    {
+      "cve": "CVE-2017-6627",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS Software and Cisco IOS XE Software UDP Packet Processing Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the UDP processing code of Cisco IOS and IOS XE could allow an unauthenticated, remote attacker to cause the input queue of an affected system to hold UDP packets, causing an interface queue wedge and denial of service.",
+      "proto_reason": "indicator:packet processing"
+    },
+    {
+      "cve": "CVE-2017-12319",
+      "vendor": "Cisco",
+      "product": "IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS XE Software Ethernet Virtual Private Network Border Gateway Protocol Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Border Gateway Protocol (BGP) over an Ethernet Virtual Private Network (EVPN) for Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause the device to reload, resulting in a denial of service (DoS) condition, or potentially corrupt the BGP routing table, which could result in network instability.",
+      "proto_reason": "indicator:bgp "
+    },
+    {
+      "cve": "CVE-2018-0171",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software Smart Install Remote Code Execution Vulnerability",
+      "desc": "Cisco IOS and IOS XE Software improperly validates packet data, allowing an unauthenticated, remote attacker to trigger a reload of an affected device, cause a denial-of-service (DoS) condition, or perform code execution on the affected device.",
+      "proto_reason": "indicator:smart install"
+    },
+    {
+      "cve": "CVE-2020-3118",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Software Discovery Protocol Format String Vulnerability",
+      "desc": "Cisco IOS XR improperly validates string input from certain fields in Cisco Discovery Protocol messages. Exploitation could allow an unauthenticated, adjacent attacker to execute code with administrative privileges or cause a reload on an affected device.",
+      "proto_reason": "indicator:cisco discovery protocol"
+    },
+    {
+      "cve": "CVE-2020-3566",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Software DVMRP Memory Exhaustion Vulnerability",
+      "desc": "Cisco IOS XR Distance Vector Multicast Routing Protocol (DVMRP) incorrectly handles Internet Group Management Protocol (IGMP) packets. Exploitation could allow an unauthenticated, remote attacker to immediately crash the IGMP process or make it consume available memory and eventually crash.",
+      "proto_reason": "indicator:igmp "
+    },
+    {
+      "cve": "CVE-2020-3569",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Software DVMRP Memory Exhaustion Vulnerability",
+      "desc": "Cisco IOS XR Distance Vector Multicast Routing Protocol (DVMRP) incorrectly handles Internet Group Management Protocol (IGMP) packets. Exploitation could allow an unauthenticated, remote attacker to immediately crash the IGMP process or make it consume available memory and eventually crash.",
+      "proto_reason": "indicator:igmp "
+    },
+    {
+      "cve": "CVE-2022-20775",
+      "vendor": "Cisco",
+      "product": "SD-WAN",
+      "class": "PT",
+      "name": "Cisco SD-WAN Path Traversal Vulnerability",
+      "desc": "Cisco SD-WAN CLI contains a path traversal vulnerability that could allow an authenticated local attacker to gain elevated privileges via improper access controls on commands within the application CLI. A successful exploit could allow the attacker to execute arbitrary commands as the root user.",
+      "proto_reason": "manual:CLI path traversal (local, not HTTP)"
+    },
+    {
+      "cve": "CVE-2025-59374",
+      "vendor": "ASUS",
+      "product": "Live Update",
+      "class": "Other",
+      "name": "ASUS Live Update Embedded Malicious Code Vulnerability",
+      "desc": "ASUS Live Update contains an embedded malicious code vulnerability client were distributed with unauthorized modifications introduced through a supply chain compromise. The modified builds could cause devices meeting specific targeting conditions to perform unintended actions. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "proto_reason": "manual:ASUS Live Update supply chain (not HTTP vuln)"
+    },
+    {
+      "cve": "CVE-2024-20481",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "Other",
+      "name": "Cisco ASA and FTD Denial-of-Service Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain a missing release of resource after effective lifetime vulnerability that could allow an unauthenticated, remote attacker to cause a denial-of-service (DoS) of the RAVPN service.",
+      "proto_reason": "manual:Cisco ASA DoS - memory leak (not exploitable via HTTP single request)"
+    },
+    {
+      "cve": "CVE-2024-47575",
+      "vendor": "Fortinet",
+      "product": "FortiManager",
+      "class": "CMDi",
+      "name": "Fortinet FortiManager Missing Authentication Vulnerability",
+      "desc": "Fortinet FortiManager contains a missing authentication vulnerability in the fgfmd daemon that allows a remote, unauthenticated attacker to execute arbitrary code or commands via specially crafted requests.",
+      "proto_reason": "manual:FortiManager fgfmd daemon (FGFM protocol port 541, not HTTP)"
+    },
+    {
+      "cve": "CVE-2024-23113",
+      "vendor": "Fortinet",
+      "product": "Multiple Products",
+      "class": "CMDi",
+      "name": "Fortinet Multiple Products Format String Vulnerability",
+      "desc": "Fortinet FortiOS, FortiPAM, FortiProxy, and FortiWeb contain a format string vulnerability that allows a remote, unauthenticated attacker to execute arbitrary code or commands via specially crafted requests.",
+      "proto_reason": "manual:Fortinet fgfmd format string (port 541, not HTTP)"
+    },
+    {
+      "cve": "CVE-2024-20399",
+      "vendor": "Cisco",
+      "product": "NX-OS",
+      "class": "CMDi",
+      "name": "Cisco NX-OS Command Injection Vulnerability",
+      "desc": "Cisco NX-OS contains a command injection vulnerability in the command line interface (CLI) that could allow an authenticated, local attacker to execute commands as root on the underlying operating system of an affected device.",
+      "proto_reason": "manual:Cisco NX-OS CLI command injection (not HTTP)"
+    },
+    {
+      "cve": "CVE-2024-20359",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+      "class": "AuthBypass",
+      "name": "Cisco ASA and FTD Privilege Escalation Vulnerability",
+      "desc": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) contain a privilege escalation vulnerability that can allow local privilege escalation from Administrator to root.",
+      "proto_reason": "manual:Cisco ASA local privilege escalation (not HTTP)"
+    },
+    {
+      "cve": "CVE-2023-20109",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE",
+      "class": "Other",
+      "name": "Cisco IOS and IOS XE Group Encrypted Transport VPN Out-of-Bounds Write Vulnerability",
+      "desc": "Cisco IOS and IOS XE contain an out-of-bounds write vulnerability in the Group Encrypted Transport VPN (GET VPN) feature that could allow an authenticated, remote attacker who has administrative control of either a group member or a key server to execute malicious code or cause a device to crash.",
+      "proto_reason": "manual:Cisco IOS GET VPN (not HTTP)"
+    },
+    {
+      "cve": "CVE-2023-28771",
+      "vendor": "Zyxel",
+      "product": "Multiple Firewalls",
+      "class": "CMDi",
+      "name": "Zyxel Multiple Firewalls OS Command Injection Vulnerability",
+      "desc": "Zyxel ATP, USG FLEX, VPN, and ZyWALL/USG firewalls allow for improper error message handling which could allow an unauthenticated attacker to execute OS commands remotely by sending crafted packets to an affected device.",
+      "proto_reason": "manual:Zyxel IKE packet handling (UDP 500, not HTTP)"
+    },
+    {
+      "cve": "CVE-2004-1464",
+      "vendor": "Cisco",
+      "product": "IOS",
+      "class": "Other",
+      "name": "Cisco IOS Denial-of-Service Vulnerability",
+      "desc": "Cisco IOS contains an unspecified vulnerability that may block further telnet, reverse telnet, Remote Shell (RSH), Secure Shell (SSH), and in some cases, Hypertext Transport Protocol (HTTP) access to the Cisco device.",
+      "proto_reason": "manual:Cisco IOS blocks telnet/SSH/RSH (not HTTP)"
+    },
+    {
+      "cve": "CVE-2016-6415",
+      "vendor": "Cisco",
+      "product": "IOS, IOS XR, and IOS XE",
+      "class": "InfoLeak",
+      "name": "Cisco IOS, IOS XR, and IOS XE IKEv1 Information Disclosure Vulnerability",
+      "desc": "Cisco IOS, IOS XR, and IOS XE contain insufficient condition checks in the part of the code that handles Internet Key Exchange version 1 (IKEv1) security negotiation requests. contains an information disclosure vulnerability in the Internet Key Exchange version 1 (IKEv1) that could allow an attacker to retrieve memory contents. Successful exploitation could allow the attacker to retrieve memory contents, which can lead to information disclosure.",
+      "proto_reason": "manual:Cisco IOS IKE handling (not HTTP)"
+    },
+    {
+      "cve": "CVE-2016-6367",
+      "vendor": "Cisco",
+      "product": "Adaptive Security Appliance (ASA)",
+      "class": "CMDi",
+      "name": "Cisco Adaptive Security Appliance (ASA) CLI Remote Code Execution Vulnerability",
+      "desc": "A vulnerability in the command-line interface (CLI) parser of Cisco ASA software could allow an authenticated, local attacker to create a denial-of-service (DoS) condition or potentially execute code.",
+      "proto_reason": "manual:Cisco ASA CLI parser (not HTTP)"
+    },
+    {
+      "cve": "CVE-2022-20821",
+      "vendor": "Cisco",
+      "product": "IOS XR",
+      "class": "Other",
+      "name": "Cisco IOS XR Open Port Vulnerability",
+      "desc": "Cisco IOS XR software health check opens TCP port 6379 by default on activation. An attacker can connect to the Redis instance on the open port and allow access to the Redis instance that is running within the NOSi container.",
+      "proto_reason": "manual:Cisco IOS XR TCP 6379 (Redis, not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-3881",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Remote Code Execution Vulnerability",
+      "desc": "A vulnerability in the Cisco Cluster Management Protocol (CMP) processing code in Cisco IOS and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a reload of an affected device or remotely execute code with elevated privileges.",
+      "proto_reason": "manual:Cisco IOS CMP (telnet-based, not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0180",
+      "vendor": "Cisco",
+      "product": "IOS Software",
+      "class": "Other",
+      "name": "Cisco IOS Software Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Login Enhancements (Login Block) feature of Cisco IOS Software could allow an unauthenticated, remote attacker to trigger a reload of an affected system, resulting in a denial of service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS Login Block (telnet/SSH, not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0179",
+      "vendor": "Cisco",
+      "product": "IOS Software",
+      "class": "Other",
+      "name": "Cisco IOS Software Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Login Enhancements (Login Block) feature of Cisco IOS Software could allow an unauthenticated, remote attacker to trigger a reload of an affected system, resulting in a denial of service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS Login Block (telnet/SSH, not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0175",
+      "vendor": "Cisco",
+      "product": "IOS, XR, and XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS, XR, and XE Software Buffer Overflow Vulnerability",
+      "desc": "Format string vulnerability in the Link Layer Discovery Protocol (LLDP) subsystem of Cisco IOS Software, Cisco IOS XE Software, and Cisco IOS XR Software could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition or execute arbitrary code with elevated privileges on an affected device.",
+      "proto_reason": "manual:Cisco IOS LLDP format string (L2 protocol, not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0174",
+      "vendor": "Cisco",
+      "product": "IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS Software and Cisco IOS XE Software Improper Input Validation Vulnerability",
+      "desc": "A vulnerability in the DHCP option 82 encapsulation functionality of Cisco IOS Software and Cisco IOS XE Software could allow for denial-of-service (DoS).",
+      "proto_reason": "manual:Cisco IOS XE DHCP option 82 (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0173",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS and IOS XE Software Improper Input Validation Vulnerability",
+      "desc": "A vulnerability in the Cisco IOS Software and Cisco IOS XE Software function that restores encapsulated option 82 information in DHCP Version 4 (DHCPv4) packets can allow for denial-of-service (DoS).",
+      "proto_reason": "manual:Cisco IOS encapsulation (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0172",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS and IOS XE Software Improper Input Validation Vulnerability",
+      "desc": "A vulnerability in the DHCP option 82 encapsulation functionality of Cisco IOS Software and Cisco IOS XE Software could allow for denial-of-service (DoS).",
+      "proto_reason": "manual:Cisco IOS DHCP option 82 (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0167",
+      "vendor": "Cisco",
+      "product": "IOS, XR, and XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS, XR, and XE Software Buffer Overflow Vulnerability",
+      "desc": "There is a buffer overflow vulnerability in the Link Layer Discovery Protocol (LLDP) subsystem of Cisco IOS Software, Cisco IOS XE Software, and Cisco IOS XR Software which could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition or execute arbitrary code.",
+      "proto_reason": "manual:Cisco IOS LLDP buffer overflow (L2 protocol, not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0161",
+      "vendor": "Cisco",
+      "product": "IOS Software",
+      "class": "Other",
+      "name": "Cisco IOS Software Resource Management Errors Vulnerability",
+      "desc": "A vulnerability in the Simple Network Management Protocol (SNMP) subsystem of Cisco IOS Software running on certain models of Cisco Catalyst Switches could allow an authenticated, remote attacker to cause a denial-of-service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS Smart Install / SNMP (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0159",
+      "vendor": "Cisco",
+      "product": "IOS Software and Cisco IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS and XE Software Internet Key Exchange Version 1 Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the implementation of Internet Key Exchange Version 1 (IKEv1) functionality in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial-of-service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS IKEv1 (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0158",
+      "vendor": "Cisco",
+      "product": "IOS Software and Cisco IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS and XE Software Internet Key Exchange Memory Leak Vulnerability",
+      "desc": "A vulnerability in the implementation of Internet Key Exchange Version 1 (IKEv1) functionality in Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial-of-service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS IKEv1 (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0155",
+      "vendor": "Cisco",
+      "product": "Catalyst 4500 Series Switches and Cisco Catalyst 4500-X Series Switches",
+      "class": "Other",
+      "name": "Cisco Catalyst Bidirectional Forwarding Detection Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Bidirectional Forwarding Detection (BFD) offload implementation of Cisco Catalyst 4500 Series Switches and Cisco Catalyst 4500-X Series Switches could allow an unauthenticated, remote attacker to cause a crash of the iosd process, causing a denial-of-service (DoS) condition.",
+      "proto_reason": "manual:Cisco Catalyst BFD offload (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0154",
+      "vendor": "Cisco",
+      "product": "IOS Software",
+      "class": "Other",
+      "name": "Cisco IOS Software Integrated Services Module for VPN Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the crypto engine of the Cisco Integrated Services Module for VPN (ISM-VPN) running Cisco IOS Software could allow an unauthenticated, remote attacker to cause a denial-of-service (DoS) condition.",
+      "proto_reason": "manual:Cisco IOS ISM-VPN crypto engine (not HTTP)"
+    },
+    {
+      "cve": "CVE-2018-0151",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS Software and Cisco IOS XE Software Quality of Service Remote Code Execution Vulnerability",
+      "desc": "A vulnerability in the quality of service (QoS) subsystem of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or execute arbitrary code with elevated privileges.",
+      "proto_reason": "manual:Cisco IOS QoS subsystem (packet processing, not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-6663",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS Software and Cisco IOS XE Software Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Autonomic Networking feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, adjacent attacker to cause autonomic nodes of an affected system to reload, resulting in denial-of-service (DoS).",
+      "proto_reason": "manual:Cisco IOS Autonomic Networking (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12240",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "CMDi",
+      "name": "Cisco IOS and IOS XE Software DHCP Remote Code Execution Vulnerability",
+      "desc": "The Dynamic Host Configuration Protocol (DHCP) relay subsystem of Cisco IOS and Cisco IOS XE Software contains a vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary code and gain full control of an affected system.",
+      "proto_reason": "manual:Cisco IOS DHCP relay (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12238",
+      "vendor": "Cisco",
+      "product": "Catalyst 6800 Series Switches",
+      "class": "Other",
+      "name": "Cisco Catalyst 6800 Series Switches VPLS Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Virtual Private LAN Service (VPLS) code of Cisco IOS for Cisco Catalyst 6800 Series Switches could allow an unauthenticated, adjacent attacker to cause a denial of service.",
+      "proto_reason": "manual:Cisco Catalyst VPLS (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12237",
+      "vendor": "Cisco",
+      "product": "IOS and IOS XE Software",
+      "class": "Other",
+      "name": "Cisco IOS and IOS XE Software Internet Key Exchange Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the Internet Key Exchange Version 2 (IKEv2) module of Cisco IOS and Cisco IOS XE could allow an unauthenticated, remote attacker to cause high CPU utilization, traceback messages, or a reload of an affected device that leads to a denial of service.",
+      "proto_reason": "manual:Cisco IOS IKEv2 (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12235",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "Other",
+      "name": "Cisco IOS Software for Cisco Industrial Ethernet Switches PROFINET Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the implementation of the PROFINET Discovery and Configuration Protocol (PN-DCP) for Cisco IOS could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service.",
+      "proto_reason": "manual:Cisco IOS PROFINET DCP (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12234",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "Other",
+      "name": "Cisco IOS Software Common Industrial Protocol Request Denial-of-Service Vulnerability",
+      "desc": "There is a vulnerability in the implementation of the Common Industrial Protocol (CIP) feature in Cisco IOS could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service.",
+      "proto_reason": "manual:Cisco IOS CIP (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12233",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "Other",
+      "name": "Cisco IOS Software Common Industrial Protocol Request Denial-of-Service Vulnerability",
+      "desc": "There is a vulnerability in the implementation of the Common Industrial Protocol (CIP) feature in Cisco IOS could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service.",
+      "proto_reason": "manual:Cisco IOS CIP (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12232",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "Other",
+      "name": "Cisco IOS Software for Cisco Integrated Services Routers Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the implementation of a protocol in Cisco Integrated Services Routers Generation 2 (ISR G2) Routers running Cisco IOS could allow an unauthenticated, adjacent attacker to cause an affected device to reload, resulting in a denial of service.",
+      "proto_reason": "manual:Cisco ISR unspecified protocol (not HTTP)"
+    },
+    {
+      "cve": "CVE-2017-12231",
+      "vendor": "Cisco",
+      "product": "IOS software",
+      "class": "Other",
+      "name": "Cisco IOS Software Network Address Translation Denial-of-Service Vulnerability",
+      "desc": "A vulnerability in the implementation of Network Address Translation (NAT) functionality in Cisco IOS could allow an unauthenticated, remote attacker to cause a denial of service.",
+      "proto_reason": "manual:Cisco IOS NAT (not HTTP)"
+    },
+    {
+      "cve": "CVE-2021-35394",
+      "vendor": "Realtek",
+      "product": "Jungle Software Development Kit (SDK)",
+      "class": "CMDi",
+      "name": "Realtek Jungle SDK Remote Code Execution Vulnerability",
+      "desc": "RealTek Jungle SDK contains multiple memory corruption vulnerabilities which can allow an attacker to perform remote code execution.",
+      "proto_reason": "manual:Realtek Jungle SDK UDPServer (UDP port 9034, not HTTP)"
+    },
+    {
+      "cve": "CVE-2020-5735",
+      "vendor": "Amcrest",
+      "product": "Cameras and Network Video Recorder (NVR)",
+      "class": "Other",
+      "name": "Amcrest Cameras and NVR Stack-based Buffer Overflow Vulnerability",
+      "desc": "Amcrest cameras and NVR contain a stack-based buffer overflow vulnerability through port 37777 that allows an unauthenticated, remote attacker to crash the device and possibly execute code.",
+      "proto_reason": "manual:Amcrest port 37777 buffer overflow (not HTTP)"
+    }
+  ],
+  "uncertain": []
+}

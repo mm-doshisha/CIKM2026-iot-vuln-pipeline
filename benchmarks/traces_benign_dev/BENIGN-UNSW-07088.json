@@ -1,0 +1,33 @@
+{
+  "cve_id": "BENIGN-UNSW-07088",
+  "vendor": "Philips",
+  "product": "Hue Bridge",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "POST",
+      "path": "/queue/getmessage",
+      "params": {
+        "sso": "91c2b44e0cc2e21ed49576ab6732c15b5c8a86e5f4211feb4a1e9a086dddf9d2663e7c6b035a33b43dd98c6168842c6b418dee983d6d77635b7bf6bebeb6d7fc69fb2c5d289c787fb0618d46ca5e25a4b9f32f9f090d8a3cff7dc8d2a395246b65ad1843f87f6d897b82c19bd2985f0bd4d520f5eb5214f76ac9a521c33a17e701d086c6c0e604f05de2dfdb509fe7dcde67fbb5faab158073f33dee6143758866025d554ddf6b26406135181e6399a733b24ec1152009dbe26f6edfcdd1129e",
+        "i": "93c71ea6e27d64babf571cd1cf370e4b",
+        "auth": "b25cc8b46d59b6bbe08dd59e5be38edb539d4c16"
+      },
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "PhilipsHue"
+}

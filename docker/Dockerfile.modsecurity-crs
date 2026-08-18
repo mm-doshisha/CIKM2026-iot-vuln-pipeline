@@ -1,0 +1,96 @@
+# docker/Dockerfile.modsecurity-crs
+# Experiment 3 (3) ModSecurity v3 + OWASP CRS v4 request-replay target.
+# No system-wide installs on the host: all apt happens INSIDE this image build.
+#
+# Pins (MUST be filled at build time and recorded in spec S3):
+#   MODSEC_V3_VERSION      e.g. v3.0.13   (libmodsecurity3 release tag)
+#   MODSEC_NGINX_VERSION   e.g. v1.0.3    (ModSecurity-nginx connector tag)
+#   CRS_V4_TAG             e.g. v4.10.0   (coreruleset git tag)
+#
+# Build (Docker):
+#   docker build --pull \
+#     --build-arg MODSEC_V3_VERSION=<...> \
+#     --build-arg MODSEC_NGINX_VERSION=<...> \
+#     --build-arg CRS_V4_TAG=<...> \
+#     -t modsec-crs:exp3 -f docker/Dockerfile.modsecurity-crs .
+
+FROM ubuntu:22.04 AS build
+
+ARG MODSEC_V3_VERSION
+ARG MODSEC_NGINX_VERSION
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git ca-certificates build-essential automake autoconf libtool \
+        pkg-config gawk bison flex \
+        libcurl4-openssl-dev libpcre2-dev libpcre3-dev libxml2-dev \
+        libyajl-dev liblmdb-dev libgeoip-dev libssl-dev zlib1g-dev \
+        nginx-common wget \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN test -n "$MODSEC_V3_VERSION" || (echo "MODSEC_V3_VERSION arg is required" && false)
+RUN git clone --depth 1 --branch "${MODSEC_V3_VERSION}" --recursive \
+        https://github.com/owasp-modsecurity/ModSecurity /src/ModSecurity \
+    && cd /src/ModSecurity \
+    && ./build.sh && ./configure && make -j"$(nproc)" && make install
+
+RUN apt-get update && apt-get install -y --no-install-recommends nginx \
+    && NGINX_VER="$(nginx -v 2>&1 | sed 's#.*/##')" \
+    && echo "NGINX_VER=${NGINX_VER}" > /nginx_ver.env \
+    && wget -q "http://nginx.org/download/nginx-${NGINX_VER}.tar.gz" -O /src/nginx.tgz \
+    && mkdir -p /src/nginx && tar -xzf /src/nginx.tgz -C /src/nginx --strip-components=1 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN test -n "$MODSEC_NGINX_VERSION" || (echo "MODSEC_NGINX_VERSION arg is required" && false)
+RUN git clone --depth 1 --branch "${MODSEC_NGINX_VERSION}" \
+        https://github.com/owasp-modsecurity/ModSecurity-nginx /src/modsec-nginx \
+    && . /nginx_ver.env \
+    && cd /src/nginx \
+    && ./configure --with-compat --add-dynamic-module=/src/modsec-nginx \
+    && make -j"$(nproc)" modules \
+    && mkdir -p /out/modules \
+    && cp objs/ngx_http_modsecurity_module.so /out/modules/
+
+
+FROM ubuntu:22.04
+ARG CRS_V4_TAG
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        nginx git ca-certificates \
+        libcurl4 libpcre2-8-0 libxml2 libyajl2 liblmdb0 libgeoip1 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=build /usr/local/modsecurity /usr/local/modsecurity
+COPY --from=build /usr/local/lib/libmodsecurity* /usr/local/lib/
+COPY --from=build /out/modules/ngx_http_modsecurity_module.so \
+     /usr/lib/nginx/modules/ngx_http_modsecurity_module.so
+COPY --from=build /src/ModSecurity/unicode.mapping /etc/modsecurity/unicode.mapping
+COPY --from=build /src/ModSecurity/modsecurity.conf-recommended \
+     /etc/modsecurity/modsecurity.conf
+RUN ldconfig
+
+RUN test -n "$CRS_V4_TAG" || (echo "CRS_V4_TAG arg is required" && false)
+RUN git clone --depth 1 --branch "${CRS_V4_TAG}" \
+        https://github.com/coreruleset/coreruleset /etc/modsecurity/crs \
+    && cp /etc/modsecurity/crs/crs-setup.conf.example \
+          /etc/modsecurity/crs/crs-setup.conf \
+    && (cp /etc/modsecurity/crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example \
+          /etc/modsecurity/crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf || true) \
+    && (cp /etc/modsecurity/crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf.example \
+          /etc/modsecurity/crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf || true) \
+    && git -C /etc/modsecurity/crs rev-parse HEAD > /etc/modsecurity/crs_commit.txt
+
+# Engine ON (blocking), default action deny 403.
+RUN sed -i 's/^SecRuleEngine .*/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf \
+    && printf '\nSecDefaultAction "phase:2,deny,status:403,log"\n' \
+       >> /etc/modsecurity/modsecurity.conf
+
+COPY docker/modsec-crs/main.conf.tmpl /etc/modsecurity/main.conf.tmpl
+COPY docker/modsec-crs/nginx.conf /etc/nginx/nginx.conf
+COPY docker/modsec-crs/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENV PARANOIA_LEVEL=1
+EXPOSE 80
+ENTRYPOINT ["/entrypoint.sh"]

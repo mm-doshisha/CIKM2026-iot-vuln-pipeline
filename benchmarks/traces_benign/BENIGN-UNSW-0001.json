@@ -1,0 +1,31 @@
+{
+  "cve_id": "BENIGN-UNSW-0001",
+  "vendor": "Withings",
+  "product": "Sleep Sensor",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "POST",
+      "path": "/cgi-bin/v2/event",
+      "params": {},
+      "headers": {
+        "User-Agent": "Withings UserAgent"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "WithingsSleepSensor"
+}

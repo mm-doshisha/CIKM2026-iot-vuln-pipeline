@@ -1,0 +1,33 @@
+{
+  "cve_id": "BENIGN-UNSW-11610",
+  "vendor": "iHome",
+  "product": "Smart Plug",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/time",
+      "params": {
+        "tz": "Australia/Sydney"
+      },
+      "headers": {
+        "User-Agent": "WMSDK"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "iHome"
+}

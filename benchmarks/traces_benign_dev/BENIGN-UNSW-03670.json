@@ -1,0 +1,31 @@
+{
+  "cve_id": "BENIGN-UNSW-03670",
+  "vendor": "Philips",
+  "product": "Hue Bridge",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "PUT",
+      "path": "/api/V8hfhXDOjn-tk8kkOWhslLDSEQzOC9JmrujNljq-/lights/3/state",
+      "params": {},
+      "headers": {
+        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-T810 Build/MMB29K)"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "PhilipsHue"
+}

@@ -1,0 +1,7 @@
+Include /etc/modsecurity/modsecurity.conf
+Include /etc/modsecurity/crs/crs-setup.conf
+
+# Set CRS paranoia level (substituted from $PARANOIA_LEVEL at startup).
+SecAction "id:900000,phase:1,nolog,pass,t:none,setvar:tx.blocking_paranoia_level=__PARANOIA_LEVEL__,setvar:tx.detection_paranoia_level=__PARANOIA_LEVEL__"
+
+Include /etc/modsecurity/crs/rules/*.conf

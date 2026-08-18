@@ -1,0 +1,41 @@
+{
+  "cve_id": "BENIGN-UNSW-0272",
+  "vendor": "Withings",
+  "product": "Sleep Sensor",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/esdk-fire-and-forget/",
+      "params": {
+        "key_id": "1",
+        "value": "dimOAtbMGCyy3Yi0PIT5PblDiVHoaoqFTjfnjzXfaCb7rR3yx0rC0V7Kj3WhySmQNixOtONFv28hRWi20su83+0aQbGK09QLZoxbdOlXWspiU1yTPCApWn3B1Ml5eUVtQyu80jlFygVH8Kh933kuqh+7yzThdgOPxsOfTHnkPw8/qcsXBKvOeRHXlCAK6c0ZDpqnKJ13il81mnmftYWnP+xOMemlGYmVtObQiLthuDIepNPJNrtB1EWgIpxjrokQmbbXfGkLIJQqvrXwvyjhVNLLX6g9dXU/Wn3HnjHLEk7J8fVj4knGh/7qZMr1nZg/QyNUfsVGWh4HQPRp3fzb7uOtNY9Wk7ktMyRVt2M="
+      },
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "WithingsSleepSensor",
+  "sampling": {
+    "method": "stratified",
+    "seed": 42,
+    "source_population": 11614,
+    "target_n": 281,
+    "max_per_device": 30,
+    "device": "WithingsSleepSensor",
+    "http_method": "GET"
+  }
+}

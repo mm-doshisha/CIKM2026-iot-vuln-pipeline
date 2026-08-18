@@ -1,0 +1,31 @@
+{
+  "cve_id": "BENIGN-UNSW-0198",
+  "vendor": "Netatmo",
+  "product": "Welcome Camera",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/a1c043ff712fc19c723bf879370f6d46/vod/6c9da9a2-da5a-4a1b-ad96-ba89fc2bfca4/files/poor/live0000288457.ts",
+      "params": {},
+      "headers": {
+        "User-Agent": "test"
+      },
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "NetatmoWelcome"
+}

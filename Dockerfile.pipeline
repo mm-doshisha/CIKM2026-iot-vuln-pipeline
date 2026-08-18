@@ -1,0 +1,22 @@
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl && \
+    rm -rf /var/lib/apt/lists/* && \
+    curl -fsSL https://download.docker.com/linux/static/stable/x86_64/docker-27.5.1.tgz | \
+    tar xz --strip-components=1 -C /usr/local/bin docker/docker
+
+COPY requirements.txt /workspace/requirements.txt
+RUN pip install --no-cache-dir -r /workspace/requirements.txt
+
+WORKDIR /workspace
+COPY src/ /workspace/src/
+COPY scripts/ /workspace/scripts/
+COPY benchmarks/ /workspace/benchmarks/
+COPY data/ /workspace/data/
+COPY prompts/ /workspace/prompts/
+
+ENV PYTHONPATH=/workspace
+ENV PYTHONUNBUFFERED=1
+ENV OUTPUT_DIR=/workspace/output
+
+ENTRYPOINT ["python3", "scripts/run_hypothesis_e2e.py"]

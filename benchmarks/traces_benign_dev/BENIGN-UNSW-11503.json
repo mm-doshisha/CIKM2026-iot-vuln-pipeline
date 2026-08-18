@@ -1,0 +1,36 @@
+{
+  "cve_id": "BENIGN-UNSW-11503",
+  "vendor": "Invoxia",
+  "product": "Triby Speaker",
+  "vuln_class": null,
+  "severity": null,
+  "source": "UNSW-IoTraffic (Wannigama et al., 2025, DOI:10.5061/dryad.w0vt4b94b)",
+  "trace": {
+    "request": {
+      "method": "GET",
+      "path": "/authentication",
+      "params": {
+        "device": "18B79E022044",
+        "name": "KTP1",
+        "version": "triby-10.48.1",
+        "locale": "en-AU",
+        "salt": "m1l6t463",
+        "signature": "9a29e39985c21d9e7848f4297fb1e6df"
+      },
+      "headers": {},
+      "body": null
+    },
+    "response": {
+      "status_code": 200,
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "body": "OK\n"
+    }
+  },
+  "payload_encoding": "none",
+  "decoded_payload": null,
+  "is_benign": true,
+  "dataset": "UNSW-IoTraffic",
+  "original_device": "TribySpeaker"
+}
