@@ -40,7 +40,8 @@ examples/            5 complete pipeline output walkthroughs (JSON + markdown)
   Qwen3-8B in BF16). Start it yourself and point the pipeline at it with
   `LLM_PORT` (default 8080). Optional auto-start uses `LLAMA_SERVER_BIN` /
   `LLAMA_MODEL_PATH`.
-- Suricata 7.x on `PATH` (firing-layer evaluation).
+- Suricata 6.0.4 on `PATH`, the version used for the paper's evaluation.
+  Check with `suricata --build-info` before running the experiments.
 - `apptainer` or `docker` for the containerized evaluation targets under `docker/`.
 
 ## Data
@@ -50,17 +51,34 @@ examples/            5 complete pipeline output walkthroughs (JSON + markdown)
 | path | content |
 |---|---|
 | `traces/` | 281 attack CVEs (one HTTP request each) |
-| `traces_benign/` | self-benign traffic (synthesis-hygiene FPR) |
-| `traces_unsw_benign/` | real IoT benign (cross-fire / deployment FPR) |
-| `traces_benign_dev/` | held-out benign pool for CEGIS counterexample values |
+| `traces_benign/` | evaluation pool: `BENIGN-UNSW-*` real IoT benign traffic and `BENIGN-CVE-*` CVE-paired benign requests |
+| `traces_unsw_benign/` | additional real IoT benign pool; overlaps with the bundled development pool and is not used in the evaluation command below |
+| `traces_benign_dev/` | development-only benign pool for baseline filtering, disjoint from `traces_benign/` under the request-signature split |
 | `heldout/`, `specs/` | held-out CVEs / request specs |
 | `ground_truth.json` | per-CVE dangerous-parameter ground truth |
 | `data/benign_values.json` | benign values used as CEGIS counterexamples |
 | `data/et_rules_index.json` | ET Open rule index (ATT&CK metadata; third-party) |
 
-`benchmarks/traces_benign_dev/` (held-out filter pool) is bundled; the larger
-source pool `traces_benign_full/` (~45 MB) is omitted and is regenerable with
-`scripts/make_dev_benign.py` + `scripts/sample_unsw_benign_stratified.py`.
+`benchmarks/traces_benign_dev/` (development filter pool) is bundled. The larger
+source pool `benchmarks/traces_benign_full/` (~45 MB) is omitted.
+
+To rebuild the source pool, obtain the UNSW-IoTraffic protocol archive
+(`protocols.zip`, containing `request/httpattributes.csv` entries; dataset DOI:
+`10.5061/dryad.w0vt4b94b`). Pass its actual local path to the converter; the ZIP
+does not need to be extracted. Run from the repository root:
+
+```bash
+python3 scripts/convert_unsw_benign_full.py /path/to/protocols.zip
+python3 scripts/make_dev_benign.py
+```
+
+The first command creates `benchmarks/traces_benign_full/`. The second builds
+`benchmarks/traces_benign_dev/`, excluding request signatures found in the
+bundled `benchmarks/traces_benign/` evaluation pool. Use a fresh checkout for
+regeneration, since these scripts do not remove stale output files.
+Keep the bundled evaluation pool unchanged when reproducing the paper.
+`scripts/sample_unsw_benign_stratified.py` creates a separate sample in
+`benchmarks/traces_unsw_benign/`; it is not needed for the steps above.
 
 ## Reproduce
 
@@ -81,37 +99,67 @@ python3 scripts/run_hypothesis_e2e.py \
     --no-classify --skip-existing
 ```
 
-Repeat for `--seed 123` and `--seed 456` (the paper reports 3-seed results).
+Repeat with `--seed 123 --output-dir output/proposed/seed_123` and
+`--seed 456 --output-dir output/proposed/seed_456` (the paper reports 3-seed
+results). Use a separate output directory for each seed and experimental
+configuration. Existing results can be reused by the pipeline; use a new
+directory when changing settings.
 
-### 2. Evaluate — detection rate, cross-fire FPR
+### 2. Evaluate — detection rate (DR) and false positive rate (FPR)
 
 ```bash
 python3 scripts/eval_suricata_e2e.py \
     --pipeline-output output/proposed/seed_42 \
     --traces-dir benchmarks/traces \
     --ground-truth benchmarks/ground_truth.json \
-    --benign-traces-dir benchmarks/traces_unsw_benign \
+    --benign-traces-dir benchmarks/traces_benign \
+    --benign-pattern 'BENIGN-UNSW-*.json' \
     --output-dir output/eval/proposed/seed_42 --workers 8
 ```
 
-The report contains the detection rate and the cross-fire FPR on real IoT
-benign traffic.
+Repeat the evaluation for seeds 123 and 456, changing both `--pipeline-output`
+and `--output-dir` to the corresponding seed directories.
+
+For the paper's detection rate (DR), divide `aggregate.true_positives` by all
+281 attack cases, including cases for which no valid rule was generated as
+misses. Across three seeds, DR is the sum of `aggregate.true_positives` divided
+by 843. The report's `aggregate.tpr` instead uses only the evaluated cases as
+its denominator and should not be reported as the paper's DR.
+
+The paper reports one FPR: the percentage of the 281 real IoT benign requests
+that trigger any generated rule. Read `aggregate.real_benign_fpr` from each
+seed's report and average the three values, multiplying by 100 for a percentage.
+This is the FPR to use when reproducing the paper's tables.
+
+Use the `BENIGN-UNSW-*` subset of `traces_benign/` for this evaluation.
+The development-pool builder (`scripts/make_dev_benign.py`) and benign-value
+extractor (`scripts/extract_benign_values.py`) exclude request signatures from
+`traces_benign/`. Do not substitute `traces_unsw_benign/` while using the bundled
+development pool: 116 of its 281 `BENIGN-UNSW-*` evaluation requests also occur
+in `traces_benign_dev/` as identical HTTP request objects.
 
 ### 3. Ablation
 
-Each component is removed by one flag, holding the rest of the proposed
+Apply the following settings to remove each component, holding the remaining
 configuration fixed:
 
 | component (paper) | how to remove |
 |---|---|
-| iteration (CEGIS loop) | `--max-iterations 1` |
+| iteration (CEGIS loop) | env `ABLATE_ALT_PHASE=1` and `--max-iterations 1` |
 | agentic mechanism | `--no-agentic-policy` |
 | counterexample diagnosis | env `ABLATE_DIRECT=1` |
 | deterministic compiler | env `ABLATE_TEMPLATE=1` |
 | memory | `--stateless-loop` |
 
+For the no-CEGIS-loop setting, add `ABLATE_ALT_PHASE=1` to the environment
+assignments in step 1 and replace `--max-iterations 10` with
+`--max-iterations 1`. This runs one outer iteration and disables the alternative
+hypothesis phase; inner condition-generation attempts remain unchanged.
+
 Run each as in step 1, then evaluate as in step 2. Statistical tests:
 `scripts/mcnemar_ablation.py`. Recovery-curve table: `scripts/cegis_recovery_table.py`.
+Use distinct synthesis and evaluation output directories for every ablation
+condition and seed to avoid reusing another condition's results.
 
 ### 4. Baselines
 
@@ -124,8 +172,9 @@ python3 scripts/baseline_gridai.py \
 ```
 
 The five compared baselines are `baseline_{gridai,rulexploit,cmirgen,autocombo,moreno}.py`.
-The non-LLM baselines (cmirgen, autocombo) take `--benign-dir`; pass the held-out
-`benchmarks/traces_benign_dev` for the leakage-free numbers reported in the paper.
+The non-LLM baselines (cmirgen, autocombo) take `--benign-dir`; pass
+`benchmarks/traces_benign_dev` for development filtering and evaluate on the
+`BENIGN-UNSW-*` subset of `benchmarks/traces_benign` as in step 2.
 
 ## Configuration reference
 
